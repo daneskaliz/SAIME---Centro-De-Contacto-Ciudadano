@@ -2,13 +2,11 @@
 
     <!--CONTENIDO-->
         <div class="card mt-5 text-center">
-          <div class="card-header">
-            <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/icons/info-circle.svg" alt="" width="30" height="30" title=""></a>
-          </div>
           <div class="card-body">
-            <div class="alert alert-info text-dark" role="alert">
-              <h5>Estimado usuario, queremos darte la más cordial bienvenida a nuestro
-              nuevo portal Web de Atención al Ciudadano.</h5>
+            <span class="mdi mdi-information"></span>
+            <div class="alert alert-info mt-2" role="alert">
+              <span class="font-weight-bold text-primary">Estimado usuario, queremos darte la más cordial bienvenida a nuestro
+              nuevo portal Web de Atención al Ciudadano.<span>
             </div>
             <p class="card-text text-justify mt-4 mx-2">Con el firme compromiso de brindar
             el mejor servicio a nuestro pueblo, queremos hacer de tu conocimiento lo que
@@ -22,7 +20,7 @@
             quejas y reclamos.</p>
             <p class="card-text text-justify mx-2">En SAIME confiamos en la buena fe
             de nuestros usuarios y trabajamos con estricto cumplimiento a la ley.</p>
-            <h5 class="text-justify mx-2">Nuestra Identidad Nuestra Fortaleza.</h5>
+            <p class="text-justify font-weight-bold mx-2">Nuestra Identidad Nuestra Fortaleza.</p>
           </div>
         </div> 
     <!--FIN CONTENIDO-->
