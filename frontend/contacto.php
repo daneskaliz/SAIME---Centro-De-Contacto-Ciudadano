@@ -6,7 +6,7 @@
   <!--CONTENIDO-->
   <div class="container contenido1 bg-light pb-5">
      <div class="row ml-5">
-      <h5 class="shadow-sm p-3 mb-5 bg-white mt-5 rounded">Comuníquese con nosotros. Atenderemos todas sus sugerencias y/o denuncias.</h5>
+      <h5 class="shadow p-3 mb-5 bg-white mt-5 rounded">Comuníquese con nosotros. Atenderemos todas sus sugerencias y/o denuncias.</h5>
      </div>
   <!--ICON TWITTER-->
     <div class="row">
