@@ -1,0 +1,75 @@
+/*ESTILOS BODY*/    
+/*ESTILOS INDEX*/
+      .container1{
+        background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+        height: 350px;
+      }
+      .container2{
+        background: white;
+        height: 200px;
+      }
+      .fontindex{
+        font-size: 22px;
+      }
+/*CONTACTO*/
+      .container3{
+        background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+        height: 400px;
+      }
+      .container4{
+        background: white;
+        height: 500px;
+      }
+      .contenido1{
+        margin-top: -320px;
+      }
+/*OFICINAS*/
+      .container5{
+      background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+      height: 400px;
+      }
+      .container6{
+        background: white;
+        height: 500px;
+      }
+      .contenido2{
+        margin-top: -320px;
+      }
+ 
+/*ESTILOS FOOTER*/    
+      .fondoFooter{
+        background: #333333;
+        height: 200px;
+        font-size: 13px;
+      }
+      .rowcarousel{
+        margin-bottom: -50px;
+      }
+      .micarousel{
+        width: 640px;
+      }
+/*ESTILOS ICONOS*/ 
+      .mdi{
+        color: grey;
+        font-size: 22px;  
+      }
+/*ESTILOS CONTENEDORES*/
+      /*index.php*/
+      .card1{
+        margin-top: -320px;
+        }
+      /*oficinas.php*/
+      .fondo2{
+        background:white;
+        height: 700px;
+      }
+      /*contacto.php*/
+      .fondo3{
+        background:white;
+        height: 700px;
+      }
+      /*centrovirtual.php*/
+      .fondo4{
+        height: 700px;
+        background:white;
+      }
