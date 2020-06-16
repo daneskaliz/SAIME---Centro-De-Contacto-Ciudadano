@@ -7,7 +7,7 @@
     <div class="container-fluid container2 my-5 py-5">  
           <div class="row justify-content-center">
             <div class="col-10">
-              <div class="card card1 text-center">
+              <div class="card card1 text-center bg-light">
                 <div class="card-body">
                   <div class="alert alert-info mt-2" role="alert">
                     <span class="font-weight-bold text-primary"><span class="mdi mdi-information mr-2"></span>Estimado usuario, queremos darte la más cordial bienvenida a nuestro
