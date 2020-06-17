@@ -1,5 +1,4 @@
-/*ESTILOS BODY*/    
-/*ESTILOS INDEX*/
+ /*ESTILOS INDEX*/
       .container1{
         background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
         height: 350px;
@@ -11,6 +10,9 @@
       .fontindex{
         font-size: 22px;
       }
+      .card1{
+      margin-top: -320px;
+      }
 /*CONTACTO*/
       .container3{
         background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
@@ -18,7 +20,7 @@
       }
       .container4{
         background: white;
-        height: 500px;
+        height: 440px;
       }
       .contenido1{
         margin-top: -320px;
@@ -26,19 +28,19 @@
 /*OFICINAS*/
       .container5{
       background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
-      height: 400px;
+      height: 600px;
       }
       .container6{
         background: white;
-        height: 400px;
+        height: 520px;
       }
       .contenido2{
-        margin-top: -370px;
+        margin-top: -570px;
       }
       .myscroll{
         padding: 1rem 1.5rem;
         width: 300px;
-        height: 600px;
+        height: 970px;
         background-color: #fff;
         border-radius: 0.25rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -48,7 +50,19 @@
         line-height: 1.3;
         overflow: auto;
       }
- 
+/*CENTRO DE ATENCIÓN AL CIUDADANO.*/
+        .container7{
+          background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+          height: 600px;
+        }
+        .container8{
+          background: white;
+          height: 600px;
+        }
+        .contenido3{
+          margin-top: -520px;
+          height: 1100px;
+        }
 /*ESTILOS FOOTER*/    
       .fondoFooter{
         background: #333333;
@@ -66,24 +80,5 @@
         color: grey;
         font-size: 22px;  
       }
-/*ESTILOS CONTENEDORES*/
-      /*index.php*/
-      .card1{
-        margin-top: -320px;
-        }
-      /*oficinas.php*/
-      .fondo2{
-        background:white;
-        height: 700px;
-      }
-      /*contacto.php*/
-      .fondo3{
-        background:white;
-        height: 700px;
-      }
-      /*centrovirtual.php*/
-      .fondo4{
-        height: 700px;
-        background:white;
-      }
-      
+/*ESTILOS index.php*/
+  

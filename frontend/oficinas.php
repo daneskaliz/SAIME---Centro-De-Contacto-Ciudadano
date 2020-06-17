@@ -14,7 +14,7 @@
 
   
   <div class="container-fluid container5">
-    <h5 class="text-white text-center py-5 font-weight-bold fontindex">OFICINAS A NIVEL NACIONAL</h5>
+    <h5 class="text-white text-center py-5 font-weight-bold fontindex">PUNTOS DE ATENCIÓN A NIVEL NACIONAL</h5>
   </div>
  
   <div class="container-fluid container6 my-5 py-5">
@@ -24,7 +24,7 @@
           <?php foreach($resultado as $dato): ?>
           
               <div class="col-sm-4">
-                <div class="card my-1" style="height:310px;">
+                <div class="card my-1" style="height:280px;">
                   <div class="card-body text-center">
                     <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/saime.png" width="60" height="50"alt="">
                     <h5 class="card-title px-3 mt-3"> <?php echo $dato['oficina'] ?> </h5>
