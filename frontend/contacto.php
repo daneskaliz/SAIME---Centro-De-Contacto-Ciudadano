@@ -5,18 +5,18 @@
   <div class="container-fluid container4 py-5">
   <!--CONTENIDO-->
   <div class="container contenido1 bg-light pb-5">
-     <div class="row ml-2">
+    <div class="row ml-2">
       <h5 class="shadow-none bg-light mt-4 rounded text-secondary">Comuníquese con nosotros. Atenderemos todas sus sugerencias y/o denuncias.</h5>
-     </div>
-     <hr class="my-3">
-  <!--ICON TWITTER-->
+    </div>
+    <hr class="my-3">
+    <!--ICON TWITTER-->
     <div class="row">
       <div class="col-6">
         <div class="row">    
           <div class="col-4">
-          <a href="https://twitter.com/redsocialsaime">
-            <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/twitter-icon.png" class="ml-5" width="90" height="90" alt="">
-          </a> 
+            <a href="https://twitter.com/redsocialsaime">
+              <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/twitter-icon.png" class="ml-5" width="90" height="90" alt="">
+            </a> 
           </div>
           <div class="col-8">
             <div class="row mt-5">
@@ -32,8 +32,8 @@
       <div class="col-sm-12 col-md-6">    
         <div class="row">
           <div class="col-4">
-          <a href="http://www.saime.gob.ve">   
-            <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/web.png" class="ml-5 my-2" width="90" height="85" alt="">
+            <a href="http://www.saime.gob.ve">   
+              <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/web.png" class="ml-5 my-2" width="90" height="85" alt="">
             </a> 
           </div>
           <div class="col-8">
@@ -50,14 +50,14 @@
       <div class="col-sm-12 col-md-6">
         <div class="row">
           <div class="col-4">
-          <a href="https://www.facebook.com/SomosRedSaime/">
-          <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/facebook-icon.png" class="ml-5 my-3" width="90" height="90" alt="">
-          </a>
+            <a href="https://www.facebook.com/SomosRedSaime/">
+              <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/facebook-icon.png" class="ml-5 my-3" width="90" height="90" alt="">
+            </a>
           </div>
           <div class="col-8">
             <div class="row mt-5">
               <span class="font-weight-bold">Facebook</span>        
-              </div>
+            </div>
             <div class="row">
               <span>Red Social SAIME</span>
             </div>
@@ -84,9 +84,9 @@
       <div class="col-sm-12 col-md-6">
         <div class="row">
           <div class="col-4">
-          <a href="https://www.instagram.com/redsocialsaime/">
-          <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/instagram.svg" class="ml-5 my-3" width="90" height="90" alt="">
-          </a>
+            <a href="https://www.instagram.com/redsocialsaime/">
+              <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/instagram.svg" class="ml-5 my-3" width="90" height="90" alt="">
+            </a>
           </div>
           <div class="col-8">
             <div class="row mt-5">
@@ -102,9 +102,9 @@
       <div class="col-sm-12 col-md-6">    
         <div class="row">
           <div class="col-4">
-          <a href="centrovirtual.php">   
-            <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/centrovirtual.png" class="ml-5 my-3" width="90" height="85" alt="">
-          </a> 
+            <a href="centrovirtual.php">   
+              <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/centrovirtual.png" class="ml-5 my-3" width="90" height="85" alt="">
+            </a> 
           </div>
           <div class="col-8">
             <div class="row mt-5">
@@ -117,14 +117,14 @@
       <div class="col-sm-12 col-md-6">
         <div class="row">
           <div class="col-4">
-          <a href="https://www.youtube.com/user/ImagenSaime">
-          <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/youtube.png" class="ml-5" width="90" height="90" alt="">
-          </a>
+            <a href="https://www.youtube.com/user/ImagenSaime">
+            <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/youtube.png" class="ml-5" width="90" height="90" alt="">
+            </a>
           </div>
           <div class="col-8">
             <div class="row mt-4">
               <span class="font-weight-bold">Youtube</span>        
-              </div>
+            </div>
             <div class="row">
               <span>RedSocialSaimeVzla</span>
             </div>
