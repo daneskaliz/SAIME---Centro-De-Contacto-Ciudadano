@@ -1,6 +1,8 @@
 <?php include'header.php'; ?>
 
-<div class="container-fluid container7"></div>
+<div class="container-fluid container7">
+<h5 class="text-white text-center py-5 font-weight-bold fontindex">AUTENTICACIÓN DE USUARIO</h5>
+</div>
   <div class="container-fluid container8 py-5">
     <!--CONTENIDO-->
     <div class="row justify-content-center">
@@ -14,21 +16,29 @@
               <form class="form-signin text-center">
             <img class="mb-2" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/saime.png" alt="" width="102" height="72">
             <div class="row justify-content-center">
-            <div class="col-4">
+            <div class="col-5">
             <div class="row justify-content-center">
-            <h5 class="h5 mb-3">Ingrese usuario y contraseña</h5>
-            <label for="inputEmail" class="sr-only">Correo Electrónico</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
+              <div class="row">
+              <h5 class="h5 mb-3">Por favor ingrese usuario y contraseña</h5>
+              </div>
             </div>
-            <div class="row my-2">
-            <label for="inputPassword" class="sr-only">Contraseña</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <label for="inputEmail" class="sr-only">Cédula de Identidad</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Cédula de Identidad" required autofocus>
+              </div>
             </div>
             <div class="row justify-content-center my-2">
-            <a href="registrousuario.php">¿Olvidó su usuario o contraseña?</a>
+              <div class="col-md-10">
+                <label for="inputPassword" class="sr-only">Contraseña</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+              </div>
             </div>
             <div class="row justify-content-center my-2">
-            <a href="terminosycondiciones.php">¿No está registrado?</a>
+            <a href="reestablecercontrasena.php">¿Olvidó su contraseña?</a>
+            </div>
+            <div class="row justify-content-center my-2">
+            <a href="terminosycondiciones.php">¿No se encuentra registrado?</a>
             </div>
             <div class="row justify-content-center">
             <div class="col-6">
