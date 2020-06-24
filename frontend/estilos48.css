@@ -86,7 +86,7 @@
         .card4{
           margin-top: -560px;
           } 
-        /*ESTILOS recuperacion.php*/
+        /*ESTILOS reestablecercontrasena.php*/
         .container13{
           background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
           height: 320px;
@@ -98,6 +98,30 @@
         .card5{
           margin-top: -230px;
           }  
+          /*ESTILOS reestablecercontrasena2.php*/
+        .container15{
+          background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+          height: 400px;
+        }
+        .container16{
+          background: white;
+          height: 320px;
+        }
+        .card6{
+          margin-top: -360px;
+          }
+      /*ESTILOS reestablecercontrasena3.php*/
+        .container17{
+          background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+          height: 320px;
+        }
+        .container18{
+          background: white;
+          height: 300px;
+        }
+        .card7{
+          margin-top: -230px;
+          }        
       /*ESTILOS FOOTER*/    
       .fondoFooter{
         background: #333333;

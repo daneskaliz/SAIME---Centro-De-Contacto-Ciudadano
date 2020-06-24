@@ -11,14 +11,18 @@
               <?php if(!$_GET): ?>
                 <div class="row justify-content-center py-1 mt-5 mb-5">
                   <div class="col-10">
-                    <div class="card bg-white">
+                    <div class="card bg-white text-center">
+                      <div class="alert alert-info" role="alert">
+                        <span class="font-weight-bold text-primary"><span class="mdi mdi-clipboard-text"></span>
+                        Datos Personales</span>
+                        <h6 class="card-subtitle mb-2 text-muted">Rellena todos los campos del formulario para completar tu registro</h6>
+                      </div>
                       <div class="card-body">
+                        
                         <form method="POST">
                           <div class="row text-left">
                             <div class="card-body text-center">
-                              <h5 class="card-title"> <span class="mdi mdi-clipboard-text"></span>Datos Personales</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">Rellena todos los campos del formulario para completar tu registro</h6>
-                              <hr>
+                            
 
                               <!--FILA SMALL-->
                               <div class="row text-left">
@@ -123,119 +127,126 @@
                             </div>
                             <!--FIN FILA INPUT-->
 
+                            </div>
+                            </div>
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                              <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
+                              Preguntas de Seguridad</span>
+                            </div>
                             <div class="row text-left">
-                            <div class="card-body text-center">
-                              <h5 class="card-title my-2"> <span class="mdi mdi-lock-question"></span>Preguntas de Seguridad</h5>
-                              <hr>
+                              <div class="col-12">
+                                <div class="card-body text-center">
 
-                              <!--FILA SMALL-->
-                              <div class="row text-left">
-                              <div class="col-md-6">
-                                <small for="formGroupExampleInput" class="ml-1">Primera Pregunta:</small>
-                              </div>
-                              <div class="col-md-6">
-                                <small for="formGroupExampleInput" class="ml-1">Respuesta 1</small> 
-                              </div>
-                            </div>
-                            <!--FIN FILA SMALL-->
+                                  <!--FILA SMALL-->
+                                  <div class="row text-left">
+                                  <div class="col-md-6">
+                                    <small for="formGroupExampleInput" class="ml-1">Primera Pregunta:</small>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <small for="formGroupExampleInput" class="ml-1">Respuesta 1</small> 
+                                  </div>
+                                </div>
+                                <!--FIN FILA SMALL-->
 
-                            <!--FILA INPUT-->
-                            <div class="row text-left">
-                              <div class="col-md-6">
-                                <select id="inputState" class="form-control">
-                                <option selected>Seleccione</option>
-                                <option>Nombre de su canción favorita</option>
-                                <option>Nombre de su primera mascota</option>
-                                <option>Lugar de nacimiento de su abuela</option>
-                                <option>Color favorito</option>
-                                <option>Marca de su primer carro</option>
-                                <option>Equipo deportivo preferido</option>
-                                <option>Fecha de nacimiento de tu padre</option>
-                                <option>Lugar de nacimiento de su madre</option>
-                                <option>Fruta favorita</option>
-                                <option>Fecha de tu graduación</option>
-                                </select>
-                              </div>
-                              <div class="col-md-6">
-                              <input type="text" class="form-control" placeholder="">
-                              </div>
-                            </div>
-                            <!--FIN FILA INPUT-->
+                                <!--FILA INPUT-->
+                                <div class="row text-left">
+                                  <div class="col-md-6">
+                                    <select id="inputState" class="form-control">
+                                    <option selected>Seleccione</option>
+                                    <option>Nombre de su canción favorita</option>
+                                    <option>Nombre de su primera mascota</option>
+                                    <option>Lugar de nacimiento de su abuela</option>
+                                    <option>Color favorito</option>
+                                    <option>Marca de su primer carro</option>
+                                    <option>Equipo deportivo preferido</option>
+                                    <option>Fecha de nacimiento de tu padre</option>
+                                    <option>Lugar de nacimiento de su madre</option>
+                                    <option>Fruta favorita</option>
+                                    <option>Fecha de tu graduación</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <input type="text" class="form-control" placeholder="">
+                                  </div>
+                                </div>
+                                <!--FIN FILA INPUT-->
 
-                            <!--FILA SMALL-->
-                            <div class="row text-left my-2">
-                              <div class="col-md-6">
-                                <small for="formGroupExampleInput" class="ml-1">Segunda Pregunta:</small>
-                              </div>
-                              <div class="col-md-6">
-                                <small for="formGroupExampleInput" class="ml-1">Respuesta 2</small> 
-                              </div>
-                            </div>
-                            <!--FIN FILA SMALL-->
+                                <!--FILA SMALL-->
+                                <div class="row text-left my-2">
+                                  <div class="col-md-6">
+                                    <small for="formGroupExampleInput" class="ml-1">Segunda Pregunta:</small>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <small for="formGroupExampleInput" class="ml-1">Respuesta 2</small> 
+                                  </div>
+                                </div>
+                                <!--FIN FILA SMALL-->
 
-                            <!--FILA INPUT-->
-                            <div class="row text-left">
-                              <div class="col-md-6">
-                                <select id="inputState" class="form-control">
-                                <option selected>Seleccione</option>
-                                <option>Nombre de su canción favorita</option>
-                                <option>Nombre de su primera mascota</option>
-                                <option>Lugar de nacimiento de su abuela</option>
-                                <option>Color favorito</option>
-                                <option>Marca de su primer carro</option>
-                                <option>Equipo deportivo preferido</option>
-                                <option>Fecha de nacimiento de tu padre</option>
-                                <option>Lugar de nacimiento de su madre</option>
-                                <option>Fruta favorita</option>
-                                <option>Fecha de tu graduación</option>
-                                </select>
-                              </div>
-                              <div class="col-md-6">
-                              <input type="text" class="form-control" placeholder="">
-                              </div>
-                            </div>
-                            <!--FIN FILA INPUT-->
+                                <!--FILA INPUT-->
+                                <div class="row text-left">
+                                  <div class="col-md-6">
+                                    <select id="inputState" class="form-control">
+                                    <option selected>Seleccione</option>
+                                    <option>Nombre de su canción favorita</option>
+                                    <option>Nombre de su primera mascota</option>
+                                    <option>Lugar de nacimiento de su abuela</option>
+                                    <option>Color favorito</option>
+                                    <option>Marca de su primer carro</option>
+                                    <option>Equipo deportivo preferido</option>
+                                    <option>Fecha de nacimiento de tu padre</option>
+                                    <option>Lugar de nacimiento de su madre</option>
+                                    <option>Fruta favorita</option>
+                                    <option>Fecha de tu graduación</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <input type="text" class="form-control" placeholder="">
+                                  </div>
+                                </div>
+                                <!--FIN FILA INPUT-->
 
-                            <!--FILA SMALL-->
-                            <div class="row text-left my-2">
-                              <div class="col-md-6">
-                                <small for="formGroupExampleInput" class="ml-1">Tercera Pregunta:</small>
-                              </div>
-                              <div class="col-md-6">
-                                <small for="formGroupExampleInput" class="ml-1">Respuesta 3</small> 
-                              </div>
-                            </div>
-                            <!--FIN FILA SMALL-->
+                                <!--FILA SMALL-->
+                                <div class="row text-left my-2">
+                                  <div class="col-md-6">
+                                    <small for="formGroupExampleInput" class="ml-1">Tercera Pregunta:</small>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <small for="formGroupExampleInput" class="ml-1">Respuesta 3</small> 
+                                  </div>
+                                </div>
+                                <!--FIN FILA SMALL-->
 
-                            <!--FILA INPUT-->
-                            <div class="row text-left">
-                              <div class="col-md-6">
-                                <select id="inputState" class="form-control">
-                                <option selected>Seleccione</option>
-                                <option>Nombre de su canción favorita</option>
-                                <option>Nombre de su primera mascota</option>
-                                <option>Lugar de nacimiento de su abuela</option>
-                                <option>Color favorito</option>
-                                <option>Marca de su primer carro</option>
-                                <option>Equipo deportivo preferido</option>
-                                <option>Fecha de nacimiento de tu padre</option>
-                                <option>Lugar de nacimiento de su madre</option>
-                                <option>Fruta favorita</option>
-                                <option>Fecha de tu graduación</option>
-                                </select>
-                              </div>
-                              <div class="col-md-6">
-                              <input type="text" class="form-control" placeholder="">
-                              </div>
-                            </div>
-                            <!--FIN FILA INPUT-->
+                                <!--FILA INPUT-->
+                                <div class="row text-left">
+                                  <div class="col-md-6">
+                                    <select id="inputState" class="form-control">
+                                    <option selected>Seleccione</option>
+                                    <option>Nombre de su canción favorita</option>
+                                    <option>Nombre de su primera mascota</option>
+                                    <option>Lugar de nacimiento de su abuela</option>
+                                    <option>Color favorito</option>
+                                    <option>Marca de su primer carro</option>
+                                    <option>Equipo deportivo preferido</option>
+                                    <option>Fecha de nacimiento de tu padre</option>
+                                    <option>Lugar de nacimiento de su madre</option>
+                                    <option>Fruta favorita</option>
+                                    <option>Fecha de tu graduación</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <input type="text" class="form-control" placeholder="">
+                                  </div>
+                                </div>
+                                <!--FIN FILA INPUT-->
 
-                            <div class="row justify-content-end my-1 mx-4 py-5">
-                              <a href="registrousuario.php">
-                              <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit"> <span class="btn-sm text-white mdi mdi-check-circle"></span>REGISTRARME</button>
-                              </a>
-                            </div>
+                                <div class="row justify-content-end my-1 mx-4 py-5">
+                                  <a href="registrousuario.php">
+                                  <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit"> <span class="btn-sm text-white mdi mdi-check-circle"></span>REGISTRARME</button>
+                                  </a>
+                                </div>
 
+                              </div>
                             </div>
                           </form>
                           </div>

@@ -8,11 +8,11 @@
     <div class="row justify-content-center">
         <div class="col-10">
           <div class="card card2 text-center bg-light">
+            <div class="alert alert-info" role="alert">
+              <span class="font-weight-bold text-primary"><span class="mdi mdi-lock">
+              </span>Autenticación de Usuario<span>
+            </div>
             <div class="card-body">
-              <div class="alert alert-info mt-2" role="alert">
-                <span class="font-weight-bold text-primary"><span class="mdi mdi-lock">
-                </span>Autenticación de Usuario<span>
-              </div>
               <form class="form-signin text-center">
             <img class="mb-2" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/saime.png" alt="" width="102" height="72">
             <div class="row justify-content-center">
@@ -24,13 +24,13 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-md-10">
-                <label for="inputEmail" class="sr-only">Cédula de Identidad</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Cédula de Identidad" required autofocus>
+              <small for="inputPassword" class="sr-only">Cédula de Identidad</small>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Cédula de Identidad" required>
               </div>
             </div>
             <div class="row justify-content-center my-2">
               <div class="col-md-10">
-                <label for="inputPassword" class="sr-only">Contraseña</label>
+                <small for="inputPassword" class="sr-only">Contraseña</small>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
               </div>
             </div>
