@@ -24,8 +24,6 @@
                 información oportuna, a quién lo solicite, con el objeto de solventar las 
                 dudas e inconvenientes y atender sus peticiones, sugerencias, denuncias, 
                 quejas y reclamos.</p>
-                <p class="card-text text-justify mx-2">En SAIME confiamos en la buena fe
-                de nuestros usuarios y trabajamos con estricto cumplimiento a la ley.</p>
                 <p class="text-justify font-weight-bold mx-2">Nuestra Identidad Nuestra Fortaleza.</p>
                 </div>
             </div> 
