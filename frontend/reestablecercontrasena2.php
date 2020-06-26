@@ -26,10 +26,10 @@
                     <!--FILA SMALL-->
                     <div class="row text-left">
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Primera Pregunta:</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primera Pregunta:</small>
                       </div>
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Respuesta 1</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 1</small>
                       </div>
                     </div>
                     <!--FIN FILA SMALL-->
@@ -46,10 +46,10 @@
                     <!--FILA SMALL-->
                     <div class="row text-left my-2">
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Segunda Pregunta:</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segunda Pregunta:</small>
                       </div>
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Respuesta 2</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 2</small>
                       </div>
                     </div>
                     <!--FIN FILA SMALL-->

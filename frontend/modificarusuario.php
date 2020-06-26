@@ -14,7 +14,7 @@
             <div class="card bg-white text-center">
               <div class="alert alert-info" role="alert">
                 <span class="font-weight-bold text-primary"><span class="mdi mdi-clipboard-text"></span>
-                  Datos Personales</span>
+                  DATOS PERSONALES</span>
                 <h6 class="card-subtitle mb-2 text-muted">Rellena todos los campos del formulario para completar tu
                   registro</h6>
               </div>
@@ -28,32 +28,10 @@
                       <!--FILA SMALL-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1">Primer Nombre:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primer Nombre:</small>
                         </div>
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1">Segundo Nombre:</small>
-                        </div>
-                      </div>
-                      <!--FIN FILA SMALL-->
-
-                      <!--FILA INPUT-->
-                      <div class="row text-left">
-                        <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="">
-                        </div>
-                      </div>
-                      <!--FIN FILA INPUT-->
-
-                      <!--FILA SMALL-->
-                      <div class="row text-left my-2">
-                        <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1">Primer Apellido:</small>
-                        </div>
-                        <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1">Segundo Apellido:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segundo Nombre:</small>
                         </div>
                       </div>
                       <!--FIN FILA SMALL-->
@@ -72,10 +50,32 @@
                       <!--FILA SMALL-->
                       <div class="row text-left my-2">
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1">Cédula:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primer Apellido:</small>
                         </div>
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1">Fecha de Nacimiento:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segundo Apellido:</small>
+                        </div>
+                      </div>
+                      <!--FIN FILA SMALL-->
+
+                      <!--FILA INPUT-->
+                      <div class="row text-left">
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" placeholder="">
+                        </div>
+                      </div>
+                      <!--FIN FILA INPUT-->
+
+                      <!--FILA SMALL-->
+                      <div class="row text-left my-2">
+                        <div class="col-md-6">
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Cédula:</small>
+                        </div>
+                        <div class="col-md-6">
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Fecha de Nacimiento:</small>
                         </div>
                       </div>
                       <!--FIN FILA SMALL-->
@@ -100,10 +100,10 @@
                       <!--FILA SMALL-->
                       <div class="row text-left my-2">
                         <div class="col-md-6">
-                          <small for="inputEmail4" class="ml-1">Correo Electrónico:</small>
+                          <small for="inputEmail4" class="ml-1 font-weight-bold">Correo Electrónico:</small>
                         </div>
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1">Teléfono:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Teléfono:</small>
                         </div>
                       </div>
                       <!--FIN FILA SMALL-->
@@ -133,7 +133,7 @@
               </div>
               <div class="alert alert-info" role="alert">
                 <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
-                  Preguntas de Seguridad</span>
+                  PREGUNTAS DE SEGURIDAD</span>
               </div>
               <div class="row text-left">
                 <div class="col-12">
@@ -142,44 +142,10 @@
                     <!--FILA SMALL-->
                     <div class="row text-left">
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Primera Pregunta:</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primera Pregunta:</small>
                       </div>
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Respuesta 1</small>
-                      </div>
-                    </div>
-                    <!--FIN FILA SMALL-->
-
-                    <!--FILA INPUT-->
-                    <div class="row text-left">
-                      <div class="col-md-6">
-                        <select id="inputState" class="form-control">
-                          <option selected>Seleccione</option>
-                          <option>Nombre de su canción favorita</option>
-                          <option>Nombre de su primera mascota</option>
-                          <option>Lugar de nacimiento de su abuela</option>
-                          <option>Color favorito</option>
-                          <option>Marca de su primer carro</option>
-                          <option>Equipo deportivo preferido</option>
-                          <option>Fecha de nacimiento de tu padre</option>
-                          <option>Lugar de nacimiento de su madre</option>
-                          <option>Fruta favorita</option>
-                          <option>Fecha de tu graduación</option>
-                        </select>
-                      </div>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="">
-                      </div>
-                    </div>
-                    <!--FIN FILA INPUT-->
-
-                    <!--FILA SMALL-->
-                    <div class="row text-left my-2">
-                      <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Segunda Pregunta:</small>
-                      </div>
-                      <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Respuesta 2</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 1</small>
                       </div>
                     </div>
                     <!--FIN FILA SMALL-->
@@ -210,10 +176,44 @@
                     <!--FILA SMALL-->
                     <div class="row text-left my-2">
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Tercera Pregunta:</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segunda Pregunta:</small>
                       </div>
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Respuesta 3</small>
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 2</small>
+                      </div>
+                    </div>
+                    <!--FIN FILA SMALL-->
+
+                    <!--FILA INPUT-->
+                    <div class="row text-left">
+                      <div class="col-md-6">
+                        <select id="inputState" class="form-control">
+                          <option selected>Seleccione</option>
+                          <option>Nombre de su canción favorita</option>
+                          <option>Nombre de su primera mascota</option>
+                          <option>Lugar de nacimiento de su abuela</option>
+                          <option>Color favorito</option>
+                          <option>Marca de su primer carro</option>
+                          <option>Equipo deportivo preferido</option>
+                          <option>Fecha de nacimiento de tu padre</option>
+                          <option>Lugar de nacimiento de su madre</option>
+                          <option>Fruta favorita</option>
+                          <option>Fecha de tu graduación</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <!--FIN FILA INPUT-->
+
+                    <!--FILA SMALL-->
+                    <div class="row text-left my-2">
+                      <div class="col-md-6">
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Tercera Pregunta:</small>
+                      </div>
+                      <div class="col-md-6">
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 3</small>
                       </div>
                     </div>
                     <!--FIN FILA SMALL-->

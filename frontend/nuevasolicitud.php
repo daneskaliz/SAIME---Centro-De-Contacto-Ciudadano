@@ -62,19 +62,54 @@ if($_POST){
       <div class="col-6">
         <?php if(!$_GET): ?>
         <div class="row justify-content-center py-1">
-          <div class="col-10">
+          <div class="col-12">
             <div class="card bg-white">
               <div class="alert alert-primary" role="alert">
-                <h5 class="card-title text-center text-dark"> Formulario de Contacto</h5>
+                <h5 class="card-title text-center">FORMULARIO DE CONTACTO</h5>
               </div>
               <div class="card-body">
                 <form method="POST">
-                  <input type="text" class="form-control my-2" disabled name="nombreyapellido" placeholder="Nombre:">
-                  <input type="text" class="form-control my-2" disabled name="correo" placeholder="Correo:">
-                  <input type="text" class="form-control my-2" disabled name="telefono" placeholder="Teléfono:">
-                  <input type="text" class="form-control my-2" disabled name="telefono" placeholder="Fecha de Nacimiento:">
-                  <input type="text" class="form-control my-2" disabled name="usuario" placeholder="Usuario:">
-                  <label for="exampleFormControlSelect1" class="mx-1 my-1">Tipo de Solicitud</label>
+                <div class="row text-center mb-2">
+                    <div class="col-md-6">
+                      <span class="mdi mdi-account"></span>
+                    </div>
+                    <div class="col-md-6">
+                      <span> 22561674 </span>
+                    </div>
+                  </div>
+                  <div class="row text-center mb-2">
+                    <div class="col-md-6">
+                      <small class="font-weight-bold"> Nombre: </small>
+                    </div>
+                    <div class="col-md-6">
+                      <span> Nilse Ruiz </span>
+                    </div>
+                  </div>
+                  <div class="row text-center mb-2">
+                    <div class="col-md-6">
+                      <small class="font-weight-bold"> Fecha de Nacimiento: </small>
+                    </div>
+                    <div class="col-md-6">
+                      <span> 16/11/1944 </span>
+                    </div>
+                  </div>
+                  <div class="row text-center mb-2">
+                    <div class="col-md-6">
+                      <small class="font-weight-bold"> Correo Electrónico: </small>
+                    </div>
+                    <div class="col-md-6">
+                      <span> nilseruiz@hotmail.com </span>
+                    </div>
+                  </div>
+                  <div class="row text-center mb-2">
+                    <div class="col-md-6">
+                      <small class="font-weight-bold"> Teléfono: </small>
+                    </div>
+                    <div class="col-md-6">
+                      <span> 04167242885 </span>
+                    </div>
+                  </div>
+                  <small for="exampleFormControlSelect1" class="mx-1 my-1">Tipo de Solicitud</small>
                   <select class="form-control" name="tipodesolicitud" id="exampleFormControlSelect1">
                     <option>Seleccione</option>
                     <option>PETICIONES</option>
@@ -82,7 +117,7 @@ if($_POST){
                     <option>SUGERENCIAS</option>
                     <option>DENUNCIAS</option>
                   </select>
-                  <label for="formGroupExampleInput" class="mt-2 mx-1">Observaciones:</label>
+                  <small for="formGroupExampleInput" class="mt-2 mx-1">Descripción:</small>
                   <textarea class="form-control" rows="8" name="observaciones" placeholder="Escriba sus comentarios"></textarea>
                   <button class="btn btn-primary mt-4 mb-2">Enviar</button>
                 </form>

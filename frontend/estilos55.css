@@ -183,19 +183,19 @@
       /*consultarestatus.php SI*/
       .containersesion6{
         background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
-        height: 350px;
+        height: 370px;
         }
         .containersesion7{
           background: white;
-          height: 280px;
+          height: 290px;
         }
         .contenidosesion3{
-          margin-top: -300px;
+          margin-top: -320px;
         }
         .myscroll2{
           padding: 1rem 1.5rem;
           width: 300px;
-          height: 400px;
+          height: 450px;
           background-color: #fff;
           border-radius: 0.25rem;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -216,4 +216,29 @@
         }
         .cardsesion1{
           margin-top: -560px;
-          } 
+          }
+        /*solicitudespendientes.php*/
+        .containersesion10{
+        background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+        height: 400px;
+        }
+        .containersesion11{
+          background: white;
+          height: 320px;
+        }
+        .contenidosesion4{
+          margin-top: -350px;
+        }
+        .myscroll3{
+          padding: 1rem 1.5rem;
+          width: 300px;
+          height: 500px;
+          background-color: #fff;
+          border-radius: 0.25rem;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          color: #333;
+          font-family: sans-serif;
+          text-align: justify;
+          line-height: 1.3;
+          overflow: auto;
+        }

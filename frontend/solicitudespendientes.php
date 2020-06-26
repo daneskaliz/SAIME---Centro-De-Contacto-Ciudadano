@@ -1,56 +1,36 @@
-<?php include('headercopy.php'); ?>
+<?php include('headeradmin.php'); ?>
 
-<!--NO HAY REGISTROS 
-<div class="container-fluid containersesion4">
-  <h5 class="text-white text-center py-5 font-weight-bold fontindex">HISTORIAL DE SOLICITUDES</h5>
-</div>
-<div class="container-fluid containersesion5 py-5">
-  
-  <div class="container contenidosesion2 bg-light pb-5">
-    <div class="row ml-2">
-      <h5 class="shadow-none font-weight-bold bg-light mt-4 rounded">Haz seguimiento a tus solicitudes.</h5>
-    </div>
-    <hr class="my-3">
-    <div class="row text-center">
-      <div class="col-12">
-        <p class="text-danger my-4"><span class="mdi mdi-alert"></span> En este momento no registra solicitudes.</p>
-        <button type="button" class="btn btn-link">Nueva Solicitud</button>
-      </div>
-    </div>
-    </div>
-  </div>
--->
-
-<div class="container-fluid containersesion6">
-  <h5 class="text-white text-center py-5 font-weight-bold fontindex">HISTORIAL DE SOLICITUDES</h5>
+<div class="container-fluid containersesion10">
+  <h5 class="text-white text-center py-5 font-weight-bold fontindex">BANDEJA DE SOLICITUDES</h5>
 </div>
 
-<div class="container-fluid containersesion7 my-5 py-5">
-  <div class="container contenidosesion3 myscroll2 bg-light pb-5">
-    <div class="row ml-2">
-      <h5 class="shadow-none font-weight-bold bg-light mt-4 rounded">Haz seguimiento a tus solicitudes.</h5>
-    </div>
+<div class="container-fluid containersesion11 my-5 py-5">
+  <div class="container contenidosesion4 myscroll3 bg-light pb-5">
     <hr class="my-3">
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-12">
         <div class="card my-5">
           <div class="card-body">
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Estatus</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Usuario</th>
                   <th scope="col">Tipo de Solicitud</th>
+                  <th scope="col">Estatus</th>
                   <th scope="col">Detalles</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td><span class="mdi mdi-cancel"></span></td>
+                  <td>10/06/2020</td>
+                  <td>2938940</td>
                   <td>Sugerencia</td>
+                  <td><span class="mdi mdi-cancel"></span></td>
                   <td>
-                    <button type="button" class="btn btn-dark btn-sm" disabled data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal">
                       Ver
                     </button>
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -67,25 +47,49 @@
                             <div class="row">
                               <div class="col-md-12">
                                 <div class="card">
-                                  <div class="alert alert-success font-weight-bold text-center" role="alert">
-                                  <span class="mdi mdi-check-circle"></span> SOLICITUD ATENDIDA
+                                  <div class="alert alert-danger font-weight-bold text-center" role="alert">
+                                  <span class="mdi mdi-cancel"></span> SOLICITUD PENDIENTE
                                   </div>
                                   <div class="card-body">
                                     <form method="POST">
-                                      <div class="row text-center mb-2">
+                                      <div class="row text-center">
                                         <div class="col-md-6">
-                                        <span class="mdi mdi-account"></span>
+                                          <span class="mdi mdi-account"></span>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> 22561674 </span>
+                                          <span> 2938940 </span>
                                         </div>
                                       </div>
                                       <div class="row text-center mb-2">
                                         <div class="col-md-6">
-                                        <small class="font-weight-bold">Fecha:</small>
+                                          <small class="font-weight-bold"> Nombre: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> 14/03/2020 </span>
+                                          <span> Nilse Ruiz </span>
+                                        </div>
+                                      </div>
+                                      <div class="row text-center mb-2">
+                                        <div class="col-md-6">
+                                          <small class="font-weight-bold"> Fecha de Nacimiento: </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span> 16/11/1944 </span>
+                                        </div>
+                                      </div>
+                                      <div class="row text-center mb-2">
+                                        <div class="col-md-6">
+                                          <small class="font-weight-bold"> Correo Electrónico: </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span> nilseruiz@hotmail.com </span>
+                                        </div>
+                                      </div>
+                                      <div class="row text-center mb-2">
+                                        <div class="col-md-6">
+                                          <small class="font-weight-bold"> Teléfono: </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span> 04167242885 </span>
                                         </div>
                                       </div>
                                       <div class="row text-center mb-2">
@@ -93,7 +97,7 @@
                                           <small class="font-weight-bold"> Tipo de Solicitud: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> Denuncia </span>
+                                          <span> Reclamo </span>
                                         </div>
                                       </div>
                                       <div class="row text-center mb-2">
@@ -101,10 +105,14 @@
                                           <small class="font-weight-bold"> Estatus: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> Solicitud Atendida </span>
+                                          <select class="form-control" name="tipodesolicitud"
+                                            id="exampleFormControlSelect1">
+                                            <option>Solicitud Pendiente</option>
+                                            <option>Solicitud Atendida</option>
+                                          </select>
                                         </div>
                                       </div>
-                                      <div class="row mt-3">
+                                      <div class="row mt-2">
                                         <div class="col-md-12">
                                           <div class="form-group">
                                             <label for="message-text" class="col-form-label text-left">Descripción:</label>
@@ -116,7 +124,7 @@
                                         <div class="col-md-12">
                                           <div class="form-group">
                                             <label for="message-text" class="col-form-label text-left">Observaciones:</label>
-                                            <textarea class="form-control" disabled id="message-text"></textarea>
+                                            <textarea class="form-control" id="message-text"></textarea>
                                            </div>
                                           </div>
                                         </div>
@@ -126,6 +134,8 @@
                               </div>
                             </div>
                           </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Enviar</button>
                           </div>
                         </div>
                       </div>
@@ -137,23 +147,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-9">
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <div class="alert alert-danger font-weight-bold" role="alert">
-              <span class="mdi mdi-cancel"></span> SOLICITUD PENDIENTE
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="alert alert-success font-weight-bold" role="alert">
-                <span class="mdi mdi-check-circle"></span> SOLICITUD ATENDIDA
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     </div>
   </div>
 </div>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!--CSS-->
-  <link rel="stylesheet" href="estilos53.css">
+  <link rel="stylesheet" href="estilos55.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap.min.css">

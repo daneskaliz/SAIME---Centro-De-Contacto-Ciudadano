@@ -60,3 +60,43 @@
         <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/saime.png" width="100" height="80" class="d-inline-block align-top mr-4" alt="logo">
         </a>
         
+        <div class="row text-center">
+                    <div class="col-md-6">
+                      <span class="mdi mdi-account"></span>
+                    </div>
+                    <div class="col-md-6">
+                      <span> 22561674 </span>
+                    </div>
+                  </div>
+                  <div class="row text-center">
+                    <div class="col-md-6">
+                      <h5> Nombre: </h5>
+                    </div>
+                    <div class="col-md-6">
+                      <span> Nilse Ruiz </span>
+                    </div>
+                  </div>
+                  <div class="row text-center">
+                    <div class="col-md-6">
+                      <h5> Fecha de Nacimiento: </h5>
+                    </div>
+                    <div class="col-md-6">
+                      <span> 16/11/1944 </span>
+                    </div>
+                  </div>
+                  <div class="row text-center">
+                    <div class="col-md-6">
+                      <h5> Correo Electrónico: </h5>
+                    </div>
+                    <div class="col-md-6">
+                      <span> nilseruiz@hotmail.com </span>
+                    </div>
+                  </div>
+                  <div class="row text-center">
+                    <div class="col-md-6">
+                      <h5> Teléfono: </h5>
+                    </div>
+                    <div class="col-md-6">
+                      <span> 04167242885 </span>
+                    </div>
+                  </div>

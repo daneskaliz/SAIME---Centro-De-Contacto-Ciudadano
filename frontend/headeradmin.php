@@ -47,19 +47,21 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle font-weight-bold text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mdi mdi-email"></span> SOLICITUD
+        <span class="mdi mdi-email"></span> BANDEJA DE SOLICITUDES
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="nuevasolicitud.php">NUEVA SOLICITUD</a>
+          <a class="dropdown-item" href="solicitudespendientes.php">SOLICITUDES PENDIENTES</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="consultarestatus.php">CONSULTAR ESTATUS</a>
+          <a class="dropdown-item" href="solicitudesatendidas.php">SOLICITUDES ATENDIDAS</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle font-weight-bold text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mdi mdi-account"></span> USUARIO
+        <span class="mdi mdi-account"></span> ADMINISTRADOR
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="modificarusuario.php">MODIFICAR USUARIO</a>
+          <a class="dropdown-item" href="modificarusuario2.php">MODIFICAR USUARIO</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="nuevousuario.php">NUEVO USUARIO</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../backend/cerrar.php">SALIR</a>
       </li>
