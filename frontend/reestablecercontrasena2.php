@@ -23,20 +23,20 @@
               <div class="card-body">
                 <form method="POST">
                   <div class="card-body text-center">
-                  <!--FILA SMALL-->
+                    <!--FILA SMALL-->
                     <div class="row text-left">
                       <div class="col-md-6">
                         <small for="formGroupExampleInput" class="ml-1">Primera Pregunta:</small>
                       </div>
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Respuesta 1</small> 
+                        <small for="formGroupExampleInput" class="ml-1">Respuesta 1</small>
                       </div>
                     </div>
                     <!--FIN FILA SMALL-->
                     <!--FILA INPUT-->
                     <div class="row text-left">
                       <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="">  
+                        <input type="text" class="form-control" placeholder="">
                       </div>
                       <div class="col-md-6">
                         <input type="text" class="form-control" placeholder="">
@@ -49,7 +49,7 @@
                         <small for="formGroupExampleInput" class="ml-1">Segunda Pregunta:</small>
                       </div>
                       <div class="col-md-6">
-                        <small for="formGroupExampleInput" class="ml-1">Respuesta 2</small> 
+                        <small for="formGroupExampleInput" class="ml-1">Respuesta 2</small>
                       </div>
                     </div>
                     <!--FIN FILA SMALL-->
@@ -65,8 +65,7 @@
                     <!--FIN FILA INPUT-->
                     <div class="row justify-content-end mx-1 my-5">
                       <a href="reestablecercontrasena3.php">
-                        <button
-                          class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit">
+                        <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit">
                           <span class="btn-sm text-white mdi mdi-check-circle"></span>
                           SIGUIENTE
                         </button>
@@ -78,16 +77,16 @@
                         </button>
                       </a>
                     </div>
-                  </form>
-                </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        <?php endif ?>
       </div>
+      <?php endif ?>
     </div>
-        </div>
+  </div>
+</div>
 </div>
 
 <?php include'footer.php'; ?>

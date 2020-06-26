@@ -1,13 +1,22 @@
-<?php include ('header.php'); ?>
+<?php
+session_start();
 
-<!--CONTENIDO-->
-<div class="container-fluid containersesion0">
+$login= 'Liz';
+
+$_SESSION['admin']= $login;
+
+?>
+
+<?php include('headercopy.php'); ?>
+    
+    <!--CONTENIDO-->
+<div class="container-fluid container1">
   <h5 class="text-white text-center py-5 font-weight-bold fontindex">CENTRO DE CONTACTO CIUDADANO</h5>
 </div>
-<div class="container-fluid containersesion1 my-5 py-5">
+<div class="container-fluid container2 my-5 py-5">
   <div class="row justify-content-center">
     <div class="col-10">
-      <div class="card cardsesion text-center bg-light">
+      <div class="card card1 text-center bg-light">
         <div class="alert alert-info" role="alert">
           <span class="font-weight-bold text-primary"><span class="mdi mdi-information mr-2">
             </span>Estimado usuario, queremos darte la más cordial bienvenida a nuestro
@@ -31,6 +40,5 @@
   </div>
 </div>
 <!--FIN CONTENIDO-->
-
 
 <?php include('footer.php'); ?>

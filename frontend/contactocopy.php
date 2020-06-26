@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('headercopy.php'); ?>
 <div class="container-fluid container3">
   <h5 class="text-white text-center py-5 font-weight-bold fontindex">CONTÁCTENOS</h5>
 </div>
@@ -108,7 +108,7 @@
       <div class="col-sm-12 col-md-6">
         <div class="row">
           <div class="col-4">
-            <a href="iniciarsesion.php">
+            <a href="sesion1.php">
               <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/centrovirtual.png" class="ml-5 my-3" width="90"
                 height="85" alt="">
             </a>

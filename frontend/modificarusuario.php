@@ -1,13 +1,13 @@
-<?php include('header.php'); ?>
+<?php include('headercopy.php'); ?>
 
-<div class="container-fluid container11">
-  <h5 class="text-white text-center py-5 font-weight-bold fontindex">REGISTRO DE USUARIOS</h5>
+<div class="container-fluid containersesion8">
+  <h5 class="text-white text-center py-5 font-weight-bold fontindex">MODIFICAR USUARIO</h5>
 </div>
-<div class="container-fluid container12 py-5">
+<div class="container-fluid containersesion9 py-5">
   <!--CONTENIDO-->
   <div class="row justify-content-center">
     <div class="col-10">
-      <div class="card card4 bg-light">
+      <div class="card cardsesion1 bg-light">
         <?php if(!$_GET): ?>
         <div class="row justify-content-center py-1 mt-5 mb-5">
           <div class="col-10">
@@ -244,7 +244,7 @@
                     <div class="row justify-content-end my-1 mx-4 py-5">
                       <a href="registrousuario.php">
                         <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit"> <span
-                            class="btn-sm text-white mdi mdi-check-circle"></span>REGISTRARME</button>
+                            class="btn-sm text-white mdi mdi-check-circle"></span>GUARDAR</button>
                       </a>
                     </div>
 

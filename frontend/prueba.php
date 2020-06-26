@@ -36,3 +36,27 @@
               </div>
             <?php endif ?>
           </div>   
+
+
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            GESTIONAR
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="solicitud.php"><span class="mdi mdi-email"> SOLICITUD</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="consulta.php"><span class="mdi mdi-file-search"></span> CONSULTA</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="usuario.php"><span class="mdi mdi-account"> USUARIO</a>
+          </div>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-dark font-weight-bold" href="../backend/cerrar.php"><span class="mdi mdi-logout"> SALIR<span class="sr-only">(current)</span></a>
+          </li>
+          </ul>
+        </div>
+        <a class="navbar-brand d-flex flex-row justify-content-center" href="http://www.saime.gob.ve/">
+        <img src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/saime.png" width="100" height="80" class="d-inline-block align-top mr-4" alt="logo">
+        </a>
+        
