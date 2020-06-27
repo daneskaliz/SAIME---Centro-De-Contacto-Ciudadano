@@ -61,6 +61,8 @@
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="modificarusuario.php">MODIFICAR USUARIO</a>
           <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="cambiarcontrasena.php">CAMBIAR CONTRASEÑA</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../backend/cerrar.php">SALIR</a>
       </li>
       

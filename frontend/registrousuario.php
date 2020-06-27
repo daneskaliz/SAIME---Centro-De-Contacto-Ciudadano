@@ -127,10 +127,41 @@
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
-
                     </div>
                   </div>
               </div>
+              <div class="alert alert-info" role="alert">
+                <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
+                  SEGURIDAD</span>
+              </div>
+              <div class="row text-left">
+                <div class="col-12">
+                  <div class="card-body text-center">
+
+                    <!--FILA SMALL-->
+                    <div class="row text-left">
+                      <div class="col-md-6">
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Contraseña</small>
+                      </div>
+                      <div class="col-md-6">
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Confirmar Contraseña:</small>
+                      </div>
+                    </div>
+                    <!--FIN FILA SMALL-->
+
+                    <!--FILA INPUT-->
+                    <div class="row text-left">
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <!--FIN FILA INPUT-->
+                  </div> 
+                </div>
+              </div>  
               <div class="alert alert-info" role="alert">
                 <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
                   PREGUNTAS DE SEGURIDAD</span>

@@ -1,13 +1,13 @@
 <?php include('headeradmin.php'); ?>
 
-<div class="container-fluid containersesion8">
+<div class="container-fluid container11">
   <h5 class="text-white text-center py-5 font-weight-bold fontindex">NUEVO USUARIO</h5>
 </div>
-<div class="container-fluid containersesion9 py-5">
+<div class="container-fluid container12 py-5">
   <!--CONTENIDO-->
   <div class="row justify-content-center">
     <div class="col-10">
-      <div class="card cardsesion1 bg-light">
+      <div class="card card4 bg-light">
         <?php if(!$_GET): ?>
         <div class="row justify-content-center py-1 mt-5 mb-5">
           <div class="col-10">
@@ -131,6 +131,39 @@
                     </div>
                   </div>
               </div>
+              <div class="alert alert-info" role="alert">
+                <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
+                  SEGURIDAD</span>
+              </div>
+              <div class="row text-left">
+                <div class="col-12">
+                  <div class="card-body text-center">
+
+                    <!--FILA SMALL-->
+                    <div class="row text-left">
+                      <div class="col-md-6">
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Contraseña</small>
+                      </div>
+                      <div class="col-md-6">
+                        <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Confirmar Contraseña:</small>
+                      </div>
+                    </div>
+                    <!--FIN FILA SMALL-->
+
+                    <!--FILA INPUT-->
+                    <div class="row text-left">
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <!--FIN FILA INPUT-->
+                    
+                  </div> 
+                </div>
+              </div>  
               <div class="alert alert-info" role="alert">
                 <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
                   PREGUNTAS DE SEGURIDAD</span>

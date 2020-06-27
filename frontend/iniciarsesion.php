@@ -26,7 +26,7 @@
                 <div class="row justify-content-center">
                   <div class="col-md-10">
                     <small for="inputPassword" class="sr-only">Cédula de Identidad</small>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Cédula de Identidad"
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Cédula de identidad"
                       required>
                   </div>
                 </div>

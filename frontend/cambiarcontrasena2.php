@@ -1,17 +1,17 @@
-<?php include('header.php'); ?>
+<?php include('headeradmin.php'); ?>
 
-<div class="container-fluid container17">
-  <h5 class="text-white text-center py-5 font-weight-bold fontindex">REESTABLECER CONTRASEÑA</h5>
+<div class="container-fluid containersesion12">
+  <h5 class="text-white text-center py-5 font-weight-bold fontindex">CAMBIAR CONTRASEÑA</h5>
 </div>
-<div class="container-fluid container18 py-5">
+<div class="container-fluid containersesion13 py-5">
   <!--CONTENIDO-->
   <div class="row justify-content-center">
     <div class="col-10">
-      <div class="card card7 text-center bg-light">
+      <div class="card cardsesion2 text-center bg-light">
         <div class="alert alert-info" role="alert">
           <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-alert">
-            </span>Reestablecer Contraseña: <h6 class="card-subtitle mb-2 text-muted">Podría iniciar sesión en esta
-              cuenta de usuario con la nueva contraseña</h6><span>
+            </span>Cambiar Contraseña: <h6 class="card-subtitle mb-2 text-muted">La contraseña
+            que registre reemplazará la anterior
         </div>
         <form class="form-signin text-center">
           <img class="mb-2" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/saime.png" alt="" width="102"
@@ -22,17 +22,20 @@
           <div class="row justify-content-center">
             <div class="col-md-3">
               <div class="row mb-2">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Contraseña" required autofocus>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Contraseña antigua" required autofocus>
+              </div>
+              <div class="row mb-2">
+                <input type="text" id="inputEmail" class="form-control" placeholder="Nueva contraseña" required autofocus>
               </div>
               <div class="row">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Confirmar contraseña" required autofocus>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Confirmar contraseña" required autofocus>
               </div>
             </div>
           </div>
           <div class="row justify-content-center my-4">
             <div class="col-6">
               <button class="btn btn-sm btn-primary font-weight-bold" type="submit"> <span
-                  class="btn-sm text-white mdi mdi-send"></span>REESTABLECER</button>
+                  class="btn-sm text-white mdi mdi-check-circle"></span>ACEPTAR</button>
             </div>
           </div>
       </div>

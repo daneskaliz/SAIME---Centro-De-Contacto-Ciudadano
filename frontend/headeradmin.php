@@ -37,13 +37,13 @@
         <ul class="navbar-nav mx-auto text-center mt-5">
           
         <li class="nav-item active">
-        <a class="nav-link font-weight-bold text-dark" href="sesion1.php"><span class="mdi mdi-home"></span> INICIO<span class="sr-only">(current)</span></a>
+        <a class="nav-link font-weight-bold text-dark" href="sesion2.php"><span class="mdi mdi-home"></span> INICIO<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold text-dark" href="oficinascopy.php"><span class="mdi mdi-google-maps"></span>OFICINAS</a>
+        <a class="nav-link font-weight-bold text-dark" href="oficinasadmin.php"><span class="mdi mdi-google-maps"></span>OFICINAS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold text-dark" href="contactocopy.php"><span class="mdi mdi-phone"></span> CONTACTO</a>
+        <a class="nav-link font-weight-bold text-dark" href="contactoadmin.php"><span class="mdi mdi-phone"></span> CONTACTO</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle font-weight-bold text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,6 +60,8 @@
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="modificarusuario2.php">MODIFICAR USUARIO</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="cambiarcontrasena2.php">CAMBIAR CONTRASEÑA</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="nuevousuario.php">NUEVO USUARIO</a>
           <div class="dropdown-divider"></div>

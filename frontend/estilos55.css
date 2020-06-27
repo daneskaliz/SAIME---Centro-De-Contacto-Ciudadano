@@ -75,16 +75,17 @@
         margin-top: -260px;
         }
         /*ESTILOS registrousuario.php*/
+         /*nuevousuario.php*/
         .container11{
           background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
-          height: 650px;
+          height: 750px;
         }
         .container12{
           background: white;
-          height: 670px;
+          height: 770px;
         }
         .card4{
-          margin-top: -560px;
+          margin-top: -660px;
           } 
         /*ESTILOS reestablecercontrasena.php*/
         .container13{
@@ -206,6 +207,7 @@
           overflow: auto;
         }
          /*ESTILOS modificarusuario.php*/
+          /*modificarusuario2.php*/
          .containersesion8{
           background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
           height: 650px;
@@ -216,7 +218,7 @@
         }
         .cardsesion1{
           margin-top: -560px;
-          }
+          } 
         /*solicitudespendientes.php*/
         .containersesion10{
         background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
@@ -242,3 +244,15 @@
           line-height: 1.3;
           overflow: auto;
         }
+        /*ESTILOS cambiarcontrasena.php*/
+        .containersesion12{
+          background-image: url("../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/img/theme.jpg");
+          height: 370px;
+        }
+        .containersesion13{
+          background: white;
+          height: 330px;
+        }
+        .cardsesion2{
+          margin-top: -280px;
+          }       

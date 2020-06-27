@@ -64,8 +64,9 @@ if($_POST){
         <div class="row justify-content-center py-1">
           <div class="col-12">
             <div class="card bg-white">
-              <div class="alert alert-primary" role="alert">
-                <h5 class="card-title text-center">FORMULARIO DE CONTACTO</h5>
+              <div class="alert alert-info text-center" role="alert">
+                <span class="font-weight-bold text-primary"><span class="mdi mdi-clipboard-text">
+              </span>FORMULARIO DE CONTACTO<span>
               </div>
               <div class="card-body">
                 <form method="POST">

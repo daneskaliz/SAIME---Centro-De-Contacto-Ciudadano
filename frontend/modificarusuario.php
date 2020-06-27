@@ -39,10 +39,10 @@
                       <!--FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="">
+                          <span class="ml-1"> Nilse </span>
                         </div>
                         <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="">
+                          <span class="ml-1">Beatriz</span>
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
@@ -61,10 +61,10 @@
                       <!--FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="">
+                          <span class="ml-1">Ruiz</span>
                         </div>
                         <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="">
+                          <span class="ml-1">Contreras</span>
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
@@ -83,16 +83,13 @@
                       <!--FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-2">
-                          <select id="inputState" class="form-control">
-                            <option selected>V</option>
-                            <option>E</option>
-                          </select>
+                          <span class="ml-1">V</span>
                         </div>
                         <div class="col-md-4">
-                          <input type="text" class="form-control" placeholder="">
+                          <span class="ml-1">2938940</span>
                         </div>
                         <div class="col-md-6">
-                          <input type="date" class="form-control" placeholder="">
+                          <span class="ml-1">16/11/1944</span>
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->

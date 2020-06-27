@@ -18,11 +18,10 @@
               height="72">
             <div class="row justify-content-center">
               <h5 class="h5 mb-3">Por favor ingrese su usuario</h5>
-              <small for="" class="sr-only">Cédula d Identidad</small>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-4">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Cédula de Identidad" required
+                <input type="email" id="inputEmail" class="form-control" placeholder="Cédula de identidad" required
                   autofocus>
               </div>
             </div>
