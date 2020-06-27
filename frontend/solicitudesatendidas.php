@@ -54,7 +54,7 @@
                                     <form method="POST">
                                       <div class="row text-center mb-2">
                                         <div class="col-md-6">
-                                        <span class="mdi mdi-account"></span>
+                                        <span class="mdi mdi-card-account-details"></span> <small class="font-weight-bold">Usuario:</small>
                                         </div>
                                         <div class="col-md-6">
                                           <span> 22561674 </span>
@@ -62,15 +62,7 @@
                                       </div>
                                       <div class="row text-center mb-2">
                                         <div class="col-md-6">
-                                        <small class="font-weight-bold">Fecha:</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <span> 14/03/2020 </span>
-                                        </div>
-                                      </div>
-                                      <div class="row text-center mb-2">
-                                        <div class="col-md-6">
-                                          <small class="font-weight-bold"> Tipo de Solicitud: </small>
+                                        <span class="mdi mdi-text-box-check"></span> <small class="font-weight-bold"> Tipo de Solicitud: </small>
                                         </div>
                                         <div class="col-md-6">
                                           <span> Denuncia </span>
@@ -78,7 +70,23 @@
                                       </div>
                                       <div class="row text-center mb-2">
                                         <div class="col-md-6">
-                                          <small class="font-weight-bold"> Estatus: </small>
+                                        <span class="mdi mdi-calendar-today"></span> <small class="font-weight-bold"> Fecha de Solicitud: </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span> 16/11/1944 </span>
+                                        </div>
+                                        </div>
+                                        <div class="row text-center mb-2">
+                                        <div class="col-md-6">
+                                        <span class="mdi mdi-calendar"></span> <small class="font-weight-bold"> Fecha de Atención: </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span> 16/11/1944 </span>
+                                        </div>
+                                        </div>
+                                      <div class="row text-center mb-2">
+                                        <div class="col-md-6">
+                                        <span class="mdi mdi-clock"></span> <small class="font-weight-bold"> Estatus: </small>
                                         </div>
                                         <div class="col-md-6">
                                           <span> Solicitud Atendida </span>

@@ -72,7 +72,7 @@ if($_POST){
                 <form method="POST">
                 <div class="row text-center mb-2">
                     <div class="col-md-6">
-                      <span class="mdi mdi-account"></span>
+                      <span class="mdi mdi-card-account-details"></span> <small class="font-weight-bold">Usuario:</small>
                     </div>
                     <div class="col-md-6">
                       <span> 22561674 </span>
@@ -80,7 +80,7 @@ if($_POST){
                   </div>
                   <div class="row text-center mb-2">
                     <div class="col-md-6">
-                      <small class="font-weight-bold"> Nombre: </small>
+                    <span class="mdi mdi-account"></span> <small class="font-weight-bold"> Nombre: </small>
                     </div>
                     <div class="col-md-6">
                       <span> Nilse Ruiz </span>
@@ -88,7 +88,7 @@ if($_POST){
                   </div>
                   <div class="row text-center mb-2">
                     <div class="col-md-6">
-                      <small class="font-weight-bold"> Fecha de Nacimiento: </small>
+                    <span class="mdi mdi-calendar-month"></span> <small class="font-weight-bold"> Fecha de Nacimiento: </small>
                     </div>
                     <div class="col-md-6">
                       <span> 16/11/1944 </span>
@@ -96,7 +96,7 @@ if($_POST){
                   </div>
                   <div class="row text-center mb-2">
                     <div class="col-md-6">
-                      <small class="font-weight-bold"> Correo Electrónico: </small>
+                    <span class="mdi mdi-email"></span> <small class="font-weight-bold"> Correo Electrónico: </small>
                     </div>
                     <div class="col-md-6">
                       <span> nilseruiz@hotmail.com </span>
@@ -104,7 +104,7 @@ if($_POST){
                   </div>
                   <div class="row text-center mb-2">
                     <div class="col-md-6">
-                      <small class="font-weight-bold"> Teléfono: </small>
+                    <span class="mdi mdi-cellphone-iphone"></span> <small class="font-weight-bold"> Teléfono: </small>
                     </div>
                     <div class="col-md-6">
                       <span> 04167242885 </span>
