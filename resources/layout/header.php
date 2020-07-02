@@ -17,9 +17,16 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../../public/bootstrap-4.5.0-dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <!--MaterialDesignIcons-->
+  
   <link rel="stylesheet" href="../../public/icon/mdi/css/materialdesignicons.min.css">
+
+  <link rel="stylesheet" href="../../node_modules/vuetify/dist/vuetify.min.css">
+  
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+
+  <script src="../../node_modules/vuetify/dist/vuetify.js"></script>
+
+  <!--MaterialDesignIcons-->
 
   <title>SAIME - Centro de Contacto Ciudadano</title>
 </head>
@@ -72,4 +79,11 @@
     <p class="m-1"><small>Bienvenido: <?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'] ?></small></p>
   </div>
 
+
   <?php endif ?>
+<v-snackbar
+  v-model="value"
+>
+  snackbarText
+  <v-btn text color="primary" @click.native="value = false">Close</v-btn>
+</v-snackbar>

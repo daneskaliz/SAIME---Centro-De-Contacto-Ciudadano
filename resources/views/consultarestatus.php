@@ -9,7 +9,7 @@ if(!isset($_SESSION)){
   }
 }
 
-  $select_solicitudes_query = 'SELECT * FROM solicitudes_activas where documento_solicitante = ?';
+  $select_solicitudes_query = 'SELECT * FROM solicitudes where documento_solicitante = ?';
   $select_solicitudes_pdo = $pdo->prepare($select_solicitudes_query);
   $select_solicitudes_pdo->execute(array($_SESSION['cedula']));
 
@@ -67,24 +67,24 @@ if(!$select_solicitudes_res){
                 <?php
                 
                 foreach ($select_solicitudes_res as $key) :?>
-                  
+
                 <tr>
                   <th scope="row"><?php echo $key['id'] ?></th>
                   <td>
                     <?php
-                      if ($key['estatus_solicitud']=="activo") {
+                      if ($key['estatus_solicitud']=="Solicitud pendiente") {
                         echo '<span class="mdi mdi-cancel"></span>';
                       } else {
                         echo '<span class="mdi mdi-check"></span>';
                       }
-                    ?>  
+                    ?>
                   </td>
                   <td><?php echo $key['tipo_solicitud']; ?></td>
                   <td>
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal<?php echo $key['id']; ?>">
                       Ver
                     </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    <div class="modal fade" id="exampleModal<?php echo $key['id']; ?>" tabindex="-1" role="dialog"
                       aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -100,65 +100,73 @@ if(!$select_solicitudes_res){
                                 <div class="card">
 
                                   <?php
-                                  if($key['estatus_solicitud']=='atendido'){
+                                  if($key['estatus_solicitud']=='Solicitud atendida'){
                                     echo '
                                     <div class="alert alert-success font-weight-bold text-center" role="alert">
                                       <span class="mdi mdi-check-circle"></span>
-                                      SOLICITUD ATENDIDA
+                                      Solicitud atendida
                                     </div>';
                                   } else {
                                     echo '
-                                    <div class="alert alert-primary font-weight-bold text-center" role="alert">
-                                      <span class="mdi mdi-check-information"></span>
-                                      SOLICITUD ACTIVA
+                                    <div class="alert alert-info font-weight-bold text-center" role="alert">
+                                      <span class="mdi mdi-information"></span>
+                                      Solicitud pendiente
                                     </div>';  
                                   }
                                   ?>
+
                                   <div class="card-body">
                                     <form method="POST">
-                                      <div class="row text-center mb-2">
+                                      <div class="row mb-2">
                                         <div class="col-md-6">
-                                          <span class="mdi mdi-card-account-details"></span> <small
-                                            class="font-weight-bold">Usuario:</small>
+                                          <span class="mdi mdi-card-account-details"></span>
+                                          <small class="font-weight-bold">Usuario:</small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> 22561674 </span>
-                                        </div>
-                                      </div>
-                                      <div class="row text-center mb-2">
-                                        <div class="col-md-6">
-                                          <span class="mdi mdi-text-box-check"></span> <small class="font-weight-bold">
-                                            Tipo de Solicitud: </small>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <span> Denuncia </span>
+                                          <span><?php echo $key['documento_solicitante']; ?></span>
                                         </div>
                                       </div>
-                                      <div class="row text-center mb-2">
+                                      <div class="row mb-2">
                                         <div class="col-md-6">
-                                          <span class="mdi mdi-calendar-today"></span> <small
-                                            class="font-weight-bold">Fecha de Solicitud:</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <span> 14/03/2020 </span>
-                                        </div>
-                                      </div>
-                                      <div class="row text-center mb-2">
-                                        <div class="col-md-6">
-                                          <span class="mdi mdi-calendar"></span> <small class="font-weight-bold">Fecha
-                                            de Atención:</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <span> 14/03/2020 </span>
-                                        </div>
-                                      </div>
-                                      <div class="row text-center mb-2">
-                                        <div class="col-md-6">
-                                          <span class="mdi mdi-clock"></span> <small class="font-weight-bold"> Estatus:
+                                          <span class="mdi mdi-text-box-check"></span>
+                                          <small class="font-weight-bold">
+                                            Tipo de Solicitud:
                                           </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> Solicitud Atendida </span>
+                                          <span><?php echo $key['tipo_solicitud']; ?></span>
+                                        </div>
+                                      </div>
+                                      <div class="row mb-2">
+                                        <div class="col-md-6">
+                                          <span class="mdi mdi-calendar-today"></span>
+                                          <small class="font-weight-bold">Fecha de Solicitud:</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span>
+                                            <?php echo $key['fecha_solicitud']; ?>
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <div class="row mb-2">
+                                        <div class="col-md-6">
+                                          <span class="mdi mdi-calendar"></span>
+                                          <small class="font-weight-bold">
+                                            Fecha de Atención:</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span> <?php echo $key['fecha_atencion']; ?></span>
+                                        </div>
+                                      </div>
+                                      <div class="row mb-2">
+                                        <div class="col-md-6">
+                                          <span class="mdi mdi-clock"></span>
+                                          <small class="font-weight-bold">
+                                            Estatus:
+                                          </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <span><?php echo $key['estatus_solicitud']; ?></span>
                                         </div>
                                       </div>
                                       <div class="row mt-3">
@@ -166,16 +174,18 @@ if(!$select_solicitudes_res){
                                           <div class="form-group">
                                             <label for="message-text"
                                               class="col-form-label text-left">Descripción:</label>
-                                            <textarea class="form-control" disabled id="message-text"></textarea>
+                                            <textarea class="form-control" disabled
+                                              id="message-text"><?php echo $key['descripcion_solicitante']; ?></textarea>
                                           </div>
                                         </div>
                                       </div>
                                       <div class="row">
                                         <div class="col-md-12">
                                           <div class="form-group">
-                                            <label for="message-text"
-                                              class="col-form-label text-left">Observaciones:</label>
-                                            <textarea class="form-control" disabled id="message-text"></textarea>
+                                            <label for="message-text" class="col-form-label text-left">
+                                              Observaciones:
+                                            </label>
+                                            <textarea class="form-control" disabled><?php echo $key['observaciones']; ?></textarea>
                                           </div>
                                         </div>
                                       </div>
@@ -190,8 +200,8 @@ if(!$select_solicitudes_res){
                     </div>
                   </td>
                 </tr>
-              
 
+                <?php endforeach ?>
               </tbody>
             </table>
           </div>
@@ -217,6 +227,5 @@ if(!$select_solicitudes_res){
   </div>
 </div>
 
-<?php endforeach ?>
 
 <?php } include('../layout/footer.php'); ?>

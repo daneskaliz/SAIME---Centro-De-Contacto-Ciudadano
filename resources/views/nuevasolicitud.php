@@ -23,10 +23,12 @@ if($_POST){
   $telefono_solicitante = $_POST['telefono_solicitante'];
   $tipo_solicitud = $_POST['tipo_solicitud'];
   $descripcion_solicitante = $_POST['descripcion_solicitante'];
+  $observaciones = 'Su solicitud esta siendo atendida por nuestros colaboradores';
   
-  $insert_solicitud_query = 'INSERT INTO solicitudes_activas (nombre_solicitante, documento_solicitante, correo_solicitante, telefono_solicitante, tipo_solicitud, descripcion_solicitante, observaciones, estatus_solicitud) VALUES (?,?,?,?,?,?,?,?)';
+  
+  $insert_solicitud_query = 'INSERT INTO solicitudes (nombre_solicitante, documento_solicitante, correo_solicitante, telefono_solicitante, tipo_solicitud, descripcion_solicitante, observaciones, estatus_solicitud, fecha_solicitud, fecha_atencion) VALUES (?,?,?,?,?,?,?,?,?,?)';
   $insert_solicitud_pdo = $pdo->prepare($insert_solicitud_query);
-  $insert_solicitud_pdo->execute(array($nombre_solicitante, $documento_solicitante, $correo_solicitante, $telefono_solicitante, $tipo_solicitud, $descripcion_solicitante, 'Ejemplo', 'activo'));
+  $insert_solicitud_pdo->execute(array($nombre_solicitante, $documento_solicitante, $correo_solicitante, $telefono_solicitante, $tipo_solicitud, $descripcion_solicitante, $observaciones, 'Solicitud pendiente', date('d-m-Y'), ''));
 
   
   echo '

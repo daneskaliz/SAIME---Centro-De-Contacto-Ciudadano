@@ -68,6 +68,18 @@
 
   ! 17. Programado para validar preguntas y respuestas de seguridad
 
+  ! 18. Programado: registro de solicitudes (sesion usuario)
+    *Pendiente: campos de fechas solicitud y fecha atencion
+
+  ! 19. Programado: consulta de solicitudes (sesion usuario)
+
+  ! 20. Creado repositorios local y remoto
+
+  ! 21. Modificar usuarios
+    * Eliminado: prefijo del codigo del telefono
+    
+  ! 22. 
+
 
 
 */

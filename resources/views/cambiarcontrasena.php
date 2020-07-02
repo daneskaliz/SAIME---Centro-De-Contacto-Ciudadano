@@ -5,6 +5,54 @@
     header('Location: index.php');
   } 
 
+if($_POST){
+  $contrasena_actual = $_POST['contrasena_actual'];
+  $contrasena_nueva = $_POST['contrasena_nueva'];
+  $contrasena_nueva_confirmada = $_POST['contrasena_nueva_confirmada'];
+  
+  $consultar_usuario_query = 'SELECT * FROM personas where cedula = ?';
+  $consultar_usuario_pdo = $pdo->prepare($consultar_usuario_query);
+  $consultar_usuario_pdo->execute(array($_SESSION['cedula']));
+
+  $consultar_usuario_res = $consultar_usuario_pdo->fetch();
+
+  // Validar contrasena
+
+  if(password_verify($contrasena_actual, $consultar_usuario_res['contrasena'])){
+    
+    $contrasena_nueva = password_hash($_POST['contrasena_nueva'], PASSWORD_DEFAULT);
+
+    $update_contrasena_query = 'UPDATE personas SET contrasena = ? WHERE personas . cedula =  ?';
+    $update_contrasena__pdo = $pdo->prepare($update_contrasena_query);
+    $update_contrasena__pdo->execute(array($contrasena_nueva, $_SESSION['cedula']));    
+
+    echo '
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong> <span class="mdi mdi-check" style="color:#384;"></span>
+    Su contraseña ha sido modificada</strong>
+    A partir de ahora, debe utilizar la nueva contraseña para iniciar sesión 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+  ';
+  
+  } else {
+    echo '
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong> <span class="mdi mdi-alert-circle" style="color:#834;"></span>
+      La contraseña actual no coincide con la registrada</strong> Por favor intente nuevamente.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+    ';
+  }
+
+
+}
+
+
 ?>
 
 <div class="container-fluid containersesion12">
@@ -16,26 +64,28 @@
     <div class="col-10">
       <div class="card cardsesion2 text-center bg-light">
         <div class="alert alert-info" role="alert">
-          <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-alert">
-            </span>Cambiar Contraseña: <h6 class="card-subtitle mb-2 text-muted">La contraseña
-            que registre reemplazará la anterior
+          <span class="font-weight-bold text-primary">
+            <span class="mdi mdi-lock-alert"></span>
+            Cambiar Contraseña:
+          </span>
+          <h6 class="card-subtitle mb-2 text-muted">La contraseña que registre reemplazará la anterior</h6>
         </div>
-        <form class="form-signin text-center">
-          <img class="mb-2" src="../../assets/img/saime.png" alt="" width="102"
-            height="72">
+        <form class="form-signin text-center" method="POST">
+          <img class="mb-2" src="../../assets/img/saime.png" alt="" width="102" height="72">
           <div class="row justify-content-center">
-            <h5 class="h5 mb-3">Por favor ingrese una nueva contraseña</h5>
+            <blockquote class="blockquote">Por favor complete los campos</blockquote>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-3">
               <div class="row mb-2">
-                <input type="text" id="inputEmail" class="form-control" placeholder="Contraseña antigua" required autofocus>
+                <input type="password" class="form-control" name="contrasena_actual" placeholder="Contraseña antigua" required>
               </div>
               <div class="row mb-2">
-                <input type="text" id="inputEmail" class="form-control" placeholder="Nueva contraseña" required autofocus>
+                <input type="password" class="form-control" name="contrasena_nueva" placeholder="Nueva contraseña">
               </div>
               <div class="row">
-                <input type="text" id="inputEmail" class="form-control" placeholder="Confirmar contraseña" required autofocus>
+                <input type="password" class="form-control" name="contrasena_nueva_confirmada"
+                  placeholder="Confirmar contraseña" required>
               </div>
             </div>
           </div>

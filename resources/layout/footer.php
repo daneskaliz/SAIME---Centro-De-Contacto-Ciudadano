@@ -5,20 +5,16 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <a href="http://digeservisp.mijp.gob.ve/">
-            <img src="../../assets/img/digeservisp.png" class="mr-4" width="100"
-              height="100" alt="...">
+            <img src="../../assets/img/digeservisp.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.fona.gob.ve/">
-            <img src="../../assets/img/fona.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/fona.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.fonbe.gob.ve/">
-            <img src="../../assets/img/fonbe.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/fonbe.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.intt.gob.ve">
-            <img src="../../assets/img/intt.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/intt.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="https://www.ona.gob.ve/">
             <img src="../../assets/img/ona.png" width="100" height="100" alt="...">
@@ -26,20 +22,16 @@
         </div>
         <div class="carousel-item">
           <a href="https://www.ovs.gob.ve/">
-            <img src="../../assets/img/ovs.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/ovs.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.saren.gob.ve/">
-            <img src="../../assets/img/saren.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/saren.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.snb.gob.ve/">
-            <img src="../../assets/img/snb.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/snb.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.cnc.gob.ve/">
-            <img src="../../assets/img/cnc.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/cnc.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.mpprijp.gob.ve/">
             <img src="../../assets/img/MPPRIJP.png" width="100" height="100" alt="...">
@@ -47,24 +39,19 @@
         </div>
         <div class="carousel-item">
           <a href="http://www.cicpc.gob.ve/">
-            <img src="../../assets/img/cicpc.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/cicpc.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.policianacional.gob.ve/">
-            <img src="../../assets/img/pnb.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/pnb.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.pcivil.gob.ve/">
-            <img src="../../assets/img/proteccion.png" class="mr-4" width="100"
-              height="100" alt="...">
+            <img src="../../assets/img/proteccion.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.unes.edu.ve/">
-            <img src="../../assets/img/unes.png" class="mr-4" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/unes.png" class="mr-4" width="100" height="100" alt="...">
           </a>
           <a href="http://www.misionatodavidavenezuela.gob.ve/">
-            <img src="../../assets/img/venezuela.png" width="100" height="100"
-              alt="...">
+            <img src="../../assets/img/venezuela.png" width="100" height="100" alt="...">
           </a>
         </div>
       </div>
@@ -76,8 +63,7 @@
 <!--FOOTER-->
 <footer class="footer d-flex justify-content-center align-items-end fondoFooter text-secondary text-center py-4">
   <a href="http://www.saime.gob.ve/">
-    <img src="../../assets/img/saime_.png" class="mt-1" width="80" height="80"
-      alt="...">
+    <img src="../../assets/img/saime_.png" class="mt-1" width="80" height="80" alt="...">
   </a>
   <div class="section ml-4">
     <span>Desarrollado por: Coordinación de Sistemas © 2020 Todos los Derechos Reservados</span>
@@ -99,17 +85,17 @@
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="../../public/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
 
+
 <script>
 var app = new Vue({
   el: '#app',
+  vuetify: new Vuetify(),
   data: {
-    message: 'Hello Vue!'
   },
   methods: {
-    alertar(val){
+    alertar(val) {
       alert(val);
     }
   },
 })
-
 </script>

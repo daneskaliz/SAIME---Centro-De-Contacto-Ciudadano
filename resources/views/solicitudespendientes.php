@@ -8,7 +8,58 @@ if(!$_SESSION){
   }
 }
 
-?>
+function consultar ($pdo){
+  $select_solicitudes_admin = 'SELECT * FROM solicitudes WHERE estatus_solicitud = ? ';
+  $select_solicitudes_admin_pdo = $pdo->prepare($select_solicitudes_admin);
+  $select_solicitudes_admin_pdo->execute(array('Solicitud pendiente'));
+  return $select_solicitudes_admin_pdo->fetchAll();
+};
+
+$solicitudes_admin_res = consultar($pdo);
+
+
+  if($_POST){
+
+    $observaciones_u = $_POST['observaciones'];
+    $id_u = $_POST['id'];
+    // probar insertar array
+    $update_solicitudes_admin = 'UPDATE solicitudes SET observaciones = ?, estatus_solicitud = ?, fecha_atencion = ? WHERE id = ? ';
+    $update_solicitudes_admin_pdo = $pdo->prepare($update_solicitudes_admin);
+    $update_solicitudes_admin_pdo->execute(array($observaciones_u, 'Solicitud atendida', date('d-m-Y'), $id_u));    
+    consultar($pdo);
+    echo '
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong> <span class="mdi mdi-check" style="color:#384;"></span> Operación realizada</strong>
+       Solicitud atendida
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  ';
+
+  }
+
+  if(!$solicitudes_admin_res){
+    echo'
+      <div class="container-fluid containersesion4">
+        <h5 class="text-white text-center py-5 font-weight-bold fontindex">HISTORIAL DE SOLICITUDES</h5>
+      </div>
+      <div class="container-fluid containersesion5 py-5">
+        <div class="container contenidosesion2 bg-light pb-5">
+          <div class="row ml-2">
+            <h5 class="shadow-none font-weight-bold bg-light mt-4 rounded">Haz seguimiento a tus solicitudes.</h5>
+          </div>
+          <hr class="my-3">
+          <div class="row text-center">
+            <div class="col-12">
+              <p class="text-danger my-4"><span class="mdi mdi-alert"></span> En este momento no registra solicitudes.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      ';
+  } else{
+  ?>
 
 <div class="container-fluid containersesion10">
   <h5 class="text-white text-center py-5 font-weight-bold fontindex">BANDEJA DE SOLICITUDES</h5>
@@ -33,17 +84,21 @@ if(!$_SESSION){
                 </tr>
               </thead>
               <tbody>
+                <?php foreach ($solicitudes_admin_res as $solicitud) : ?>
                 <tr>
-                  <th scope="row">1</th>
-                  <td>10/06/2020</td>
-                  <td>2938940</td>
-                  <td>Sugerencia</td>
-                  <td><span class="mdi mdi-cancel"></span></td>
+                  <th scope="row"><?php echo $solicitud['id']; ?></th>
+                  <td><?php echo $solicitud['fecha_solicitud'] ?></td>
+                  <td><?php echo $solicitud['documento_solicitante'] ?></td>
+                  <td><?php echo $solicitud['tipo_solicitud'] ?></td>
                   <td>
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal">
+                    <span class="mdi mdi-cancel"></span>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+                      data-target="#exampleModal<?php echo $solicitud['id']; ?>">
                       Ver
                     </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    <div class="modal fade" id="exampleModal<?php echo $solicitud['id']; ?>" tabindex="-1" role="dialog"
                       aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -58,72 +113,78 @@ if(!$_SESSION){
                               <div class="col-md-12">
                                 <div class="card">
                                   <div class="alert alert-danger font-weight-bold text-center" role="alert">
-                                  <span class="mdi mdi-cancel"></span> SOLICITUD PENDIENTE
+                                    <span class="mdi mdi-cancel"></span>
+                                      <?php echo $solicitud['estatus_solicitud']; ?>
                                   </div>
                                   <div class="card-body">
                                     <form method="POST">
-                                      <div class="row text-center">
+                                      <input type="hidden" name="id" value="<?php echo $solicitud['id']; ?>">
+                                      <div class="row mb-2">
                                         <div class="col-md-6">
                                           <span class="mdi mdi-card-account-details"></span>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> 2938940 </span>
+                                          <input class="form-control" readonly name="documento_solicitante"
+                                            value="<?php echo $solicitud['documento_solicitante']; ?>">
                                         </div>
                                       </div>
-                                      <div class="row text-center mb-2">
+                                      <div class="row mb-2">
                                         <div class="col-md-6">
-                                        <span class="mdi mdi-account"></span> <small class="font-weight-bold"> Nombre: </small>
+                                          <span class="mdi mdi-account"></span> <small class="font-weight-bold"> Nombre:
+                                          </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> Nilse Ruiz </span>
-                                        </div>
-                                      </div>
-                                      <div class="row text-center mb-2">
-                                        <div class="col-md-6">
-                                        <span class="mdi mdi-calendar-month"></span> <small class="font-weight-bold"> Fecha de Nacimiento: </small>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <span> 16/11/1944 </span>
+                                          <input class="form-control" readonly name="nombre_solicitante"
+                                            value="<?php echo $solicitud['nombre_solicitante']; ?>">
                                         </div>
                                       </div>
-                                      <div class="row text-center mb-2">
+                                      <div class="row mb-2">
                                         <div class="col-md-6">
-                                        <span class="mdi mdi-email"></span> <small class="font-weight-bold"> Correo Electrónico: </small>
+                                          <span class="mdi mdi-email"></span> <small class="font-weight-bold"> Correo
+                                            Electrónico: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> nilseruiz@hotmail.com </span>
-                                        </div>
-                                      </div>
-                                      <div class="row text-center mb-2">
-                                        <div class="col-md-6">
-                                        <span class="mdi mdi-cellphone-iphone"></span> <small class="font-weight-bold"> Teléfono: </small>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <span> 04167242885 </span>
+                                          <input class="form-control" readonly name="correo_solicitante"
+                                            value="<?php echo $solicitud['correo_solicitante']; ?>">
                                         </div>
                                       </div>
-                                      <div class="row text-center mb-2">
+                                      <div class="row mb-2">
                                         <div class="col-md-6">
-                                        <span class="mdi mdi-text-box-check"></span> <small class="font-weight-bold"> Tipo de Solicitud: </small>
+                                          <span class="mdi mdi-cellphone-iphone"></span> <small
+                                            class="font-weight-bold"> Teléfono: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <span> Reclamo </span>
-                                        </div>
-                                      </div>
-                                      <div class="row text-center mb-2">
-                                        <div class="col-md-6">
-                                        <span class="mdi mdi-calendar-today"></span> <small class="font-weight-bold"> Fecha de Solicitud: </small>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <span> 16/11/1944 </span>
+                                          <input class="form-control" readonly name="telefono_solicitante"
+                                            value="<?php echo $solicitud['telefono_solicitante']; ?>">
                                         </div>
                                       </div>
-                                      <div class="row text-center mb-2">
+                                      <div class="row mb-2">
                                         <div class="col-md-6">
-                                        <span class="mdi mdi-clock"></span> <small class="font-weight-bold"> Estatus: </small>
+                                          <span class="mdi mdi-text-box-check"></span> <small class="font-weight-bold">
+                                            Tipo de Solicitud: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <select class="form-control" name="tipodesolicitud"
+                                          <input class="form-control" readonly name="tipo_solicitud"
+                                            value="<?php echo $solicitud['tipo_solicitud']; ?>">
+                                        </div>
+                                      </div>
+                                      <div class="row mb-2">
+                                        <div class="col-md-6">
+                                          <span class="mdi mdi-calendar-today"></span> <small class="font-weight-bold">
+                                            Fecha de Solicitud: </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <input class="form-control" readonly name="fecha_solicitud"
+                                            value="<?php echo $solicitud['fecha_solicitud']; ?>">
+                                        </div>
+                                      </div>
+                                      <div class="row mb-2">
+                                        <div class="col-md-6">
+                                          <span class="mdi mdi-clock"></span> <small class="font-weight-bold"> Estatus:
+                                          </small>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <select class="form-control" name="estatus_modificado"
                                             id="exampleFormControlSelect1">
                                             <option>Solicitud Pendiente</option>
                                             <option>Solicitud Atendida</option>
@@ -133,33 +194,38 @@ if(!$_SESSION){
                                       <div class="row mt-2">
                                         <div class="col-md-12">
                                           <div class="form-group">
-                                            <label for="message-text" class="col-form-label text-left">Descripción:</label>
-                                            <textarea class="form-control" disabled id="message-text"></textarea>
-                                           </div>
+                                            <label for="message-text"
+                                              class="col-form-label text-left">Descripción:</label>
+                                            <textarea class="form-control" name="descripcion_solicitante"
+                                              readonly><?php echo $solicitud['descripcion_solicitante']; ?></textarea>
                                           </div>
                                         </div>
-                                        <div class="row">
+                                      </div>
+                                      <div class="row">
                                         <div class="col-md-12">
                                           <div class="form-group">
-                                            <label for="message-text" class="col-form-label text-left">Observaciones:</label>
-                                            <textarea class="form-control" id="message-text"></textarea>
-                                           </div>
+                                            <label for="message-text"
+                                              class="col-form-label text-left">Observaciones:</label>
+                                            <textarea class="form-control" name="observaciones"
+                                              id="message-text"></textarea>
+                                            <div class="modal-footer">
+                                              <button type="submit" class="btn btn-primary">Enviar</button>
+                                            </div>
                                           </div>
                                         </div>
+                                      </div>
                                     </form>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Enviar</button>
-                          </div>
                         </div>
                       </div>
                     </div>
                   </td>
                 </tr>
+                <?php endforeach; ?>
               </tbody>
             </table>
           </div>
@@ -169,4 +235,4 @@ if(!$_SESSION){
   </div>
 </div>
 
-<?php include('../layout/footer.php'); ?>
+<?php } include('../layout/footer.php'); ?>
