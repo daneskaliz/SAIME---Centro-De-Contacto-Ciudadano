@@ -37,6 +37,8 @@ if($_POST){
     </div>
   ';
   
+  //header('Location:index.php');
+  
   } else {
     echo '
       <div class="alert alert-danger alert-dismissible fade show" role="alert">

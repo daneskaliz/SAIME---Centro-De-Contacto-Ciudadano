@@ -6,8 +6,9 @@
   <!--CONTENIDO-->
   <div class="container contenido1 bg-light pb-5">
     <div class="row ml-2">
-      <h5 class="shadow-none bg-light mt-4 rounded">Comuníquese con nosotros. Atenderemos todas sus sugerencias y/o
-        denuncias.</h5>
+      <h5 class="shadow-none bg-light mt-4 rounded">
+        Comuníquese con nosotros. Atenderemos todas sus sugerencias y/o denuncias.
+      </h5>
     </div>
     <hr class="my-3">
     <!--ICON TWITTER-->
@@ -108,7 +109,7 @@
       <div class="col-sm-12 col-md-6">
         <div class="row">
           <div class="col-4">
-            <a href="iniciarsesion.php">
+            <a href="<?php echo (isset($_SESSION['rol'])) ? 'nuevasolicitud.php' : 'iniciarsesion.php' ; ?>">
               <img src="../../assets/img/centrovirtual.png" class="ml-5 my-3" width="90"
                 height="85" alt="">
             </a>

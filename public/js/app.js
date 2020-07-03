@@ -2,6 +2,7 @@ new Vue({
   el: '#app',
   vuetify: new Vuetify(),
   data: () => ({
+    //snack: true,
     camposPorValidar: [],
     preguntas_a:[
       'Lugar de nacimiento de su madre',
@@ -27,9 +28,7 @@ new Vue({
     snack: {active: false, msg: ''}
   }),
   methods: {
-    pruebas (){
-      console.log(this.camposPorValidar);
-      
+    pruebas (pr){
     },
     comparar_contrasenas(contrasena, confirmada,){
       if(contrasena && confirmada){
@@ -43,9 +42,9 @@ new Vue({
       mensaje_error = ''
       if(totalCampos === valorCampos.length){ // Comparar largo indicado como parametro vs largo de campos completados para empezar a validar
         for (let aux of valorCampos) { // Con cada accion sobre los campos, validar si alguno esta vacio       
-          if (aux === '') {
+          if (aux === undefined || aux === '') {
             res = true
-            break
+            break;
           } else {
             res = false
           }

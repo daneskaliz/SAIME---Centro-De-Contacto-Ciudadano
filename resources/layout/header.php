@@ -1,5 +1,9 @@
 <?php
   session_start();
+  date_default_timezone_set('America/Caracas');
+  //echo date('Y-m-d H:i') . "<br>\n";
+  
+
 ?>
 
 <?php include_once '../../db/conexion.php'; ?>
@@ -18,13 +22,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../../public/bootstrap-4.5.0-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../node_modules/vuetify/dist/vuetify.min.css">
-  
+
   <link rel="stylesheet" href="../../public/icon/mdi/css/materialdesignicons.min.css">
 
   <script src="../../node_modules/vue/dist/vue.js"></script>
 
   <script src="../../node_modules/vuetify/dist/vuetify.js"></script>
-  
+
 
   <!--MaterialDesignIcons-->
 
@@ -71,14 +75,16 @@
     </a>
   </nav>
   <v-app id="app">
-  
+
     <?php if(isset($_SESSION['rol'])): ?>
-    
+
     <div class="row justify-content-end mr-5">
       <span class="mdi mdi-account-outline"></span>
-      <p class="m-1"><small>Bienvenido: <?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'] ?></small></p>
+      <p class="m-1"><small>Bienvenido:
+          <?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'] ?></small></p>
     </div>
 
 
-    <?php endif ?>
-    
+    <?php endif ?>  
+
+      

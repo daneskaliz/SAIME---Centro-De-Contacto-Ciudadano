@@ -46,93 +46,48 @@
 
 <div class="container-fluid container6 my-5 py-5">
   <div class="container contenido2 myscroll bg-light pb-5">
-    <?php foreach($estados as $estado): ?>
 
-    <div class="row mx-1 my-3 align-items-center">
-      <span class="mdi mdi-google-maps border-primary">
-        <?php
-            echo $estado;
-            ?>
+    <v-expansion-panels>
 
-      </span>
-    </div>
-    <hr>
-    <div class="row">
+      <div class="row my-3 align-items-center">
+      <?php foreach ($estados as $nombre): ?>
 
-
-
-
-
-      <v-expansion-panels>
-
-        <?php foreach ($estados as $nombre): ?>
-        <div class="row">
-
+        <div class="col-md-12">
           <v-expansion-panel>
             <v-expansion-panel-header>
               <?php echo $nombre ?>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
+             
+              <div class="row">
               <?php foreach ($resultado as $oficina): ?>
+              <?php if ($oficina['estado'] == $nombre): ?>
               
-              <div class="col-sm-4">
-                <div class="card my-1" style="height:280px;">
-                  <div class="card-body text-center">
-                    <img src="../../assets/img/saime.png" width="60" height="50" alt="">
-                    <h5 class="card-title px-3 mt-3"> <?php echo $oficina['nombre'] ?> </h5>
-                    <p class="card-text align-text-top px-3 text-justify"> <?php echo $oficina['direccion'] ?> </p>
-                    <p class="card-text align-text-top px-3 text-justify"> <?php echo $oficina['horario'] ?> </p>
+                <div class="col-sm-4">
+                  <div class="card my-1" style="height:280px;">
+                    <div class="card-body text-center">
+                      <img src="../../assets/img/saime.png" width="60" height="50" alt="">
+                      <h5 class="card-title px-3 mt-3"> <?php echo $oficina['nombre'] ?> </h5>
+                      <p class="card-text align-text-top px-3 text-justify"> <?php echo $oficina['direccion'] ?> </p>
+                      <p class="card-text align-text-top px-3 text-justify"> <?php echo $oficina['horario'] ?> </p>
+                    </div>
                   </div>
                 </div>
-              </div>  
-
-            <?php endforeach ?>
+              
+              <?php endif ?>
+              <?php endforeach ?>
+              </div>
+            
             </v-expansion-panel-content>
           </v-expansion-panel>
-        
         </div>
-        <?php endforeach ?>
-      
-      </v-expansion-panels>
 
-
-
-
-
-
-
-
-      <!--  -->
-
-
-
-      <?php
-            foreach($resultado as $dato):
-            if($dato['estado'] == $estado){
-          ?>
-
-      <div class="col-sm-4">
-        <div class="card my-1" style="height:280px;">
-          <div class="card-body text-center">
-            <img src="../../assets/img/saime.png" width="60" height="50" alt="">
-            <h5 class="card-title px-3 mt-3"> <?php echo $dato['nombre'] ?> </h5>
-            <p class="card-text align-text-top px-3 text-justify"> <?php echo $dato['direccion'] ?> </p>
-            <p class="card-text align-text-top px-3 text-justify"> <?php echo $dato['horario'] ?> </p>
-          </div>
-        </div>
+      <?php endforeach ?>
       </div>
 
-      <?php
-          }
-          endforeach;
-          ?>
-
-    </div>
-    <?php
-          endforeach;
-          ?>
-
+    </v-expansion-panels>
   </div>
+
 </div>
 
 <?php include('../layout/footer.php'); ?>

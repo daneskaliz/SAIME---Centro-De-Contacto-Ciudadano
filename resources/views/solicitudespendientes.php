@@ -208,7 +208,7 @@ $solicitudes_admin_res = consultar($pdo);
                                               class="col-form-label text-left">Observaciones:</label>
                                             <v-textarea dense outlined rows="5" name="observaciones"
                                               v-model="camposPorValidar[1]" :rules="reglas.requerido" maxlength="500" counter
-                                              placeholder="Observaciones ante el planteamiento del usuario"></v-textarea>
+                                              placeholder="Observaciones ante el requerimiento del usuario"></v-textarea>
                                           </div>
                                           <div class="modal-footer">
                                             <button type="submit" class="btn btn-primary text-white"

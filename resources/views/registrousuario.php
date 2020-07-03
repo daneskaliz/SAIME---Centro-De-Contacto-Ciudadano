@@ -35,15 +35,19 @@ if($_POST){
   $insert_datos_usuario_pdo = $pdo->prepare($insert_datos_usuario_query);
   $insert_datos_usuario_pdo->execute(array($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido, $cedula, $fecha_nacimiento, $correo, $telefono, $contrasena, $pregunta_uno, $pregunta_dos, $pregunta_tres, $respuesta_uno, $respuesta_dos, $respuesta_tres, $rol_nuevo_usuario));
   
-  echo '
+  if(isset($_SESSION['rol'])){
+    echo '
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong> <span class="mdi mdi-check" style="color:#384;"></span> Operación realizada</strong>
-       El usuario ha sido agregado exitosamente
+      <strong> <span class="mdi mdi-check" style="color:#384;"></span>Usuario Administrador agregado</strong> - Puede iniciar sesión con los datos definidos.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+      <span aria-hidden="true">&times;</span>
       </button>
     </div>
   ';
+  }else{
+  header('Location: iniciarsesion.php');
+}
+  
 }
 
 ?>
@@ -89,8 +93,8 @@ if($_POST){
                             persistent-hint />
                         </div>
                         <div class="col-md-6">
-                          <v-text-field name="segundo_nombre" placeholder="Segundo nombre" dense outlined
-                            maxlength="20" />
+                          <v-text-field name="segundo_nombre" placeholder="Segundo nombre" dense outlined :rules="[reglas.requerido]"
+                            maxlength="20" hint="(*) Requerido" v-model="camposPorValidar[16]"persistent-hint />
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
@@ -110,8 +114,8 @@ if($_POST){
                             outlined maxlength="20" hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]" />
                         </div>
                         <div class="col-md-6">
-                          <v-text-field name="segundo_apellido" placeholder="Segundo apellido" dense outlined
-                            maxlength="20" />
+                          <v-text-field name="segundo_apellido" placeholder="Segundo apellido" dense outlined :rules="[reglas.requerido]"
+                            maxlength="20" hint="(*) Requerido" v-model="camposPorValidar[15]"persistent-hint />
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
@@ -284,7 +288,7 @@ if($_POST){
                       <button
                         class="btn btn-sm btn-primary mx-1 font-weight-bold text-white"
                         v-if="comparar_contrasenas(camposPorValidar[7],camposPorValidar[8])"
-                        :disabled="validar_campos(15, camposPorValidar, false, null)"
+                        :disabled="validar_campos(17, camposPorValidar, false, null)"
                         type="submit"
                       >
                         <span class="btn-sm text-white mdi mdi-check-circle"></span>

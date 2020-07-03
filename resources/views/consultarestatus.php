@@ -108,8 +108,8 @@ if(!$select_solicitudes_res){
                                     </div>';
                                   } else {
                                     echo '
-                                    <div class="alert alert-info font-weight-bold text-center" role="alert">
-                                      <span class="mdi mdi-information"></span>
+                                    <div class="alert alert-danger font-weight-bold text-center" role="alert">
+                                      <span class="mdi mdi-information-outline"></span>
                                       Solicitud pendiente
                                     </div>';  
                                   }

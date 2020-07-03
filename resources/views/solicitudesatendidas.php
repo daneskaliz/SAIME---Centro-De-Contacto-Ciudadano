@@ -66,10 +66,11 @@ if(!$_SESSION){
               <tbody>
                 <?php foreach($solicitudes_admin_resB as $s_atendida): ?>
                 <tr>
-                  <th scope="row">1</th>
-                  <td><?php echo $s_atendida['id'] ?></td>
+                  
+                  <th scope="row"><?php echo $s_atendida['id'] ?></th>
                   <td><?php echo $s_atendida['fecha_solicitud'] ?></td>
                   <td><?php echo $s_atendida['nombre_solicitante'] ?></td>
+                  <td><?php echo $s_atendida['tipo_solicitud'] ?></td>
                   <td><span class="ml-3 mdi mdi-check-circle"></span></td>
                   <td>
                     <button

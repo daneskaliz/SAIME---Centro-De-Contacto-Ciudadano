@@ -26,8 +26,8 @@ if($_POST){ // * Si se activa el método POST
   if($select_usuario_resultado && password_verify($contrasena_login, $select_usuario_resultado['contrasena'])){
   
     $_SESSION = $select_usuario_resultado;
-    header('Location: index.php');
-    
+    header('Location:index.php');    
+
   } else {
     
     $_SESSION = array();
@@ -71,7 +71,7 @@ if(isset($_GET['cc'])){
     </div>
   ';
 }
-
+ 
 ?>
 
 <div class="container-fluid container7">
@@ -134,7 +134,7 @@ if(isset($_GET['cc'])){
                       class="btn btn-primary btn-sm text-white font-weight-bold"
                       :disabled="validar_campos(2, camposPorValidar)"
                       type="submit"
-                      role="button"
+                      @click="alertar('Sesión iniciada')"
                     >
                       <span class="mdi mdi-login text-white"></span>
                       INGRESAR

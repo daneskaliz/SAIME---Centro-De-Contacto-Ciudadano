@@ -89,20 +89,20 @@ if($_POST){
                 <form method="POST">
                   <div class="row mb-2">
                     <div class="col-md-6">
-                      <span class="mdi mdi-account"></span> <small class="font-weight-bold"> Nombre: </small>
+                      <span class="mdi mdi-account"></span> <small class="font-weight-bold"> Nombre y apellido: </small>
                     </div>
                     <div class="col-md-6">
-                      <v-text-field name="nombre_solicitante" v-model="camposPorValidar[0]" :rules="[reglas.requerido]"
-                        maxlength="50" dense outlined></v-text-field>
-                    </div>
+                      <input class="form-control" name="nombre_solicitante" readonly 
+                        value="<?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido']; ?>">
+                      </div>
                   </div>
                   <div class="row mb-2">
                     <div class="col-md-6">
                       <span class="mdi mdi-email"></span> <small class="font-weight-bold"> Correo Electrónico: </small>
                     </div>
                     <div class="col-md-6">
-                      <v-text-field name="correo_solicitante" v-model="camposPorValidar[1]" :rules="[email_regla]"
-                        maxlength="50" dense outlined></v-text-field>
+                    <input class="form-control" name="correo_solicitante" readonly 
+                        value="<?php echo $_SESSION['correo']; ?>">
                     </div>
                   </div>
                   <div class="row mb-2">
@@ -110,18 +110,18 @@ if($_POST){
                       <span class="mdi mdi-cellphone-iphone"></span> <small class="font-weight-bold"> Teléfono: </small>
                     </div>
                     <div class="col-md-6">
-                      <v-text-field name="telefono_solicitante" maxlength="20" v-model="camposPorValidar[2]"
-                        :rules="[reglas.requerido]" dense outlined></v-text-field>
+                    <input class="form-control" name="telefono_solicitante" readonly 
+                        value="<?php echo $_SESSION['telefono']; ?>">
                     </div>
                   </div>
                   <small class="font-weight-bold mx-1">Tipo de Solicitud</small>
-                  <v-select dense outlined v-model="camposPorValidar[3]" name="tipo_solicitud"
+                  <v-select dense outlined v-model="camposPorValidar[0]" name="tipo_solicitud"
                     :items="['PETICIONES','RECLAMOS', 'SUGERENCIAS','DENUNCIAS']">
                   </v-select>
                   <small class="font-weight-bold mx-1">Descripción:</small>
                   <v-textarea dense outlined rows="8" name="descripcion_solicitante"
-                  v-model="camposPorValidar[4]" maxlength="500" counter placeholder="Escriba sus comentarios"></v-textarea>
-                  <button class="btn btn-primary mt-4 mb-2" :disabled="validar_campos(4,camposPorValidar)" type="submit">
+                  v-model="camposPorValidar[1]" maxlength="500" counter placeholder="Escriba sus comentarios"></v-textarea>
+                  <button class="text-white btn btn-primary mt-4 mb-2" :disabled="validar_campos(2,camposPorValidar, false, false)" type="submit">
                     Enviar
                   </button>
                 </form>
