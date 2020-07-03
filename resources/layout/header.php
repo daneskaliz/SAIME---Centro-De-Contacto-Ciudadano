@@ -13,18 +13,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!--CSS-->
-  <link rel="stylesheet" href="../../public/css/estilos55.css">
+  <link rel="stylesheet" href="../../public/css/estilos56.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../../public/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../node_modules/vuetify/dist/vuetify.min.css">
   
   <link rel="stylesheet" href="../../public/icon/mdi/css/materialdesignicons.min.css">
 
-  <link rel="stylesheet" href="../../node_modules/vuetify/dist/vuetify.min.css">
-  
   <script src="../../node_modules/vue/dist/vue.js"></script>
 
   <script src="../../node_modules/vuetify/dist/vuetify.js"></script>
+  
 
   <!--MaterialDesignIcons-->
 
@@ -70,20 +70,15 @@
       <img src="../../assets/img/saime.png" width="100" height="80" class="d-inline-block align-top mr-4" alt="logo">
     </a>
   </nav>
-  <div id="app">
+  <v-app id="app">
   
-  <?php if(isset($_SESSION['rol'])): ?>
-  
-  <div class="row justify-content-end mr-5">
-    <span class="mdi mdi-account-outline"></span>
-    <p class="m-1"><small>Bienvenido: <?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'] ?></small></p>
-  </div>
+    <?php if(isset($_SESSION['rol'])): ?>
+    
+    <div class="row justify-content-end mr-5">
+      <span class="mdi mdi-account-outline"></span>
+      <p class="m-1"><small>Bienvenido: <?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'] ?></small></p>
+    </div>
 
 
-  <?php endif ?>
-<v-snackbar
-  v-model="value"
->
-  snackbarText
-  <v-btn text color="primary" @click.native="value = false">Close</v-btn>
-</v-snackbar>
+    <?php endif ?>
+    

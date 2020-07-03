@@ -81,7 +81,7 @@ if(!$select_solicitudes_res){
                   </td>
                   <td><?php echo $key['tipo_solicitud']; ?></td>
                   <td>
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal<?php echo $key['id']; ?>">
+                    <button type="button" class="text-white btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal<?php echo $key['id']; ?>">
                       Ver
                     </button>
                     <div class="modal fade" id="exampleModal<?php echo $key['id']; ?>" tabindex="-1" role="dialog"

@@ -67,13 +67,21 @@ if($_POST){
             </div>
             <div class="row justify-content-center">
               <div class="col-md-4">
-                <input type="text" id="inputEmail" class="form-control" name="cedula" placeholder="Cédula de identidad"
-                  autofocus>
+              <v-text-field
+                name="cedula"
+                v-model="camposPorValidar[0]"
+                placeholder="Cédula de identidad"
+                :rules="[reglas.requerido]"
+                dense
+                outlined
+                counter="8"
+                maxlength="8"
+              />
               </div>
             </div>
             <div class="row justify-content-center my-4">
               <div class="col-6">
-                <button class="btn btn-sm btn-primary font-weight-bold" type="submit">
+                <button class="btn btn-sm btn-primary text-white font-weight-bold" :disabled="validar_campos(1, camposPorValidar)" type="submit">
                   <span class="btn-sm text-white mdi mdi-send"></span>
                   ENVIAR
                 </button>

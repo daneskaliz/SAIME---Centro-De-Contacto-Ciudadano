@@ -151,21 +151,15 @@ if($_POST){
                       <!--FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <input
-                            type="email"
-                            class="form-control"
-                            name="correo"
-                            id="inputEmail4"
-                            value="<?php echo $select_usuario_md_resultado['correo']; ?>"
-                            >
+                          <v-text-field type="email" name="correo"
+                            value="<?php echo $select_usuario_md_resultado['correo']; ?>" v-model="camposPorValidar[0]"
+                            :rules="[email_regla]" dense outlined counter maxlength="50" />
                         </div>
                         <div class="col-md-6">
-                        <input
-                            class="form-control"
-                            name="telef"
-                            id="telef"
-                            value="<?php echo $select_usuario_md_resultado['telefono']; ?>"
-                            >
+                          <v-text-field id="telef" value="<?php echo $select_usuario_md_resultado['telefono']; ?>"
+                            v-model="camposPorValidar[1]" :rules="[reglas.requerido]" dense outlined counter
+                            maxlength="20" />
+
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
@@ -180,14 +174,12 @@ if($_POST){
                   <div class="row text-left">
                     <div class="col-12">
                       <div class="card-body text-center">
-
-                        <!--FILA SMALL-->
                         <div class="row text-left">
                           <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primera Pregunta:</small>
+                            <small class="ml-1 font-weight-bold">Primera Pregunta:</small>
                           </div>
                           <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 1</small>
+                            <small class="ml-1 font-weight-bold">Respuesta 1</small>
                           </div>
                         </div>
                         <!--FIN FILA SMALL-->
@@ -195,22 +187,14 @@ if($_POST){
                         <!--FILA INPUT-->
                         <div class="row text-left">
                           <div class="col-md-6">
-                            <select id="inputState" name="pregunta_1" class="form-control">
-                              <option selected>Seleccione</option>
-                              <option>Nombre de su canción favorita</option>
-                              <option>Nombre de su primera mascota</option>
-                              <option>Lugar de nacimiento de su abuela</option>
-                              <option>Color favorito</option>
-                              <option>Marca de su primer carro</option>
-                              <option>Equipo deportivo preferido</option>
-                              <option>Fecha de nacimiento de tu padre</option>
-                              <option>Lugar de nacimiento de su madre</option>
-                              <option>Fruta favorita</option>
-                              <option>Fecha de tu graduación</option>
-                            </select>
+                            <v-select name="pregunta_1" :items="preguntas_a" v-model="camposPorValidar[2]"
+                              placeholder="Seleccionar" dense outlined hint="(*) Requerido" persistent-hint
+                              :rules="[reglas.requerido]">
+                            </v-select>
                           </div>
                           <div class="col-md-6">
-                            <input type="text" class="form-control" name="respuesta_1">
+                            <v-text-field name="respuesta_1" v-model="camposPorValidar[3]" :rules="[reglas.requerido]"
+                              dense outlined hint="(*) Requerido" persistent-hint />
                           </div>
                         </div>
                         <!--FIN FILA INPUT-->
@@ -218,10 +202,10 @@ if($_POST){
                         <!--FILA SMALL-->
                         <div class="row text-left my-2">
                           <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segunda Pregunta:</small>
+                            <small class="ml-1 font-weight-bold">Segunda Pregunta:</small>
                           </div>
                           <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 2</small>
+                            <small class="ml-1 font-weight-bold">Respuesta 2</small>
                           </div>
                         </div>
                         <!--FIN FILA SMALL-->
@@ -229,73 +213,55 @@ if($_POST){
                         <!--FILA INPUT-->
                         <div class="row text-left">
                           <div class="col-md-6">
-                            <select id="inputState" name="pregunta_2" class="form-control">
-                              <option selected>Seleccione</option>
-                              <option>Nombre de su canción favorita</option>
-                              <option>Nombre de su primera mascota</option>
-                              <option>Lugar de nacimiento de su abuela</option>
-                              <option>Color favorito</option>
-                              <option>Marca de su primer carro</option>
-                              <option>Equipo deportivo preferido</option>
-                              <option>Fecha de nacimiento de tu padre</option>
-                              <option>Lugar de nacimiento de su madre</option>
-                              <option>Fruta favorita</option>
-                              <option>Fecha de tu graduación</option>
-                            </select>
+                            <v-select name="pregunta_2" :items="preguntas_b" v-model="camposPorValidar[4]"
+                              placeholder="Seleccionar" dense outlined hint="(*) Requerido" persistent-hint
+                              :rules="[reglas.requerido]">
+                            </v-select>
                           </div>
                           <div class="col-md-6">
-                            <input type="text" class="form-control" name="respuesta_2">
+                            <v-text-field name="respuesta_2" v-model="camposPorValidar[5]"
+                            :rules="[reglas.requerido]" dense outlined hint="(*) Requerido" persistent-hint />
                           </div>
                         </div>
-                        <!--FIN FILA INPUT-->
+                      </div>
+                      <!--FIN FILA INPUT-->
 
-                        <!--FILA SMALL-->
-                        <div class="row text-left my-2">
-                          <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Tercera Pregunta:</small>
-                          </div>
-                          <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 3</small>
-                          </div>
+                      <!--FILA SMALL-->
+                      <div class="row text-left my-2">
+                        <div class="col-md-6">
+                          <small class="ml-1 font-weight-bold">Tercera Pregunta:</small>
                         </div>
-                        <!--FIN FILA SMALL-->
-
-                        <!--FILA INPUT-->
-                        <div class="row text-left">
-                          <div class="col-md-6">
-                            <select id="inputState" name="pregunta_3" class="form-control">
-                              <option selected>Seleccione</option>
-                              <option>Nombre de su canción favorita</option>
-                              <option>Nombre de su primera mascota</option>
-                              <option>Lugar de nacimiento de su abuela</option>
-                              <option>Color favorito</option>
-                              <option>Marca de su primer carro</option>
-                              <option>Equipo deportivo preferido</option>
-                              <option>Fecha de nacimiento de tu padre</option>
-                              <option>Lugar de nacimiento de su madre</option>
-                              <option>Fruta favorita</option>
-                              <option>Fecha de tu graduación</option>
-                            </select>
-                          </div>
-                          <div class="col-md-6">
-                            <input type="text" class="form-control" name="respuesta_3">
-                          </div>
+                        <div class="col-md-6">
+                          <small class="ml-1 font-weight-bold">Respuesta 3</small>
                         </div>
-                        <!--FIN FILA INPUT-->
+                      </div>
+                      <!--FIN FILA SMALL-->
 
-                        <div class="row justify-content-end my-1 mx-4 py-5">
-                          <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit">
-                            <span class="btn-sm text-white mdi mdi-check-circle"></span>
-                            GUARDAR
-                          </button>
+                      <!--FILA INPUT-->
+                      <div class="row text-left">
+                        <div class="col-md-6">
+                          <v-select name="pregunta_3" :items="preguntas_c" v-model="camposPorValidar[6]"
+                            placeholder="Seleccionar" dense outlined hint="(*) Requerido" persistent-hint
+                            :rules="[reglas.requerido]">
+                          </v-select>
                         </div>
-
+                        <div class="col-md-6">
+                          <v-text-field name="respuesta_3" placeholder="Respuesta 3" v-model="camposPorValidar[7]"
+                          :rules="[reglas.requerido]" dense outlined hint="(*) Requerido" persistent-hint />
+                        </div>
                       </div>
                     </div>
+                    <div class="row justify-content-end my-1 mx-4 py-5">
+                      <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white"
+                        :disabled="validar_campos(8, camposPorValidar, false, null)"type="submit">
+                        <span class="btn-sm text-white mdi mdi-check-circle"></span>
+                        GUARDAR
+                      </button>
+                    </div>
                   </div>
-                </form>
               </div>
             </div>
+            </form>
           </div>
         </div>
       </div>

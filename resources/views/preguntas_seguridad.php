@@ -69,7 +69,14 @@ if($_POST){
                         <span class="font-weight-bold"><?php echo $pregunta_a.':'; ?></span>
                       </div>
                       <div class="col-md-6">
-                        <input type="password" name="respuesta_y" class="form-control">
+                      <v-text-field
+                        name="respuesta_y"
+                        v-model="camposPorValidar[0]"
+                        :rules="[reglas.requerido]"
+                        type="password"
+                        dense
+                        outlined
+                      />
                       </div>
                     </div>
                     <!--FIN FILA INPUT-->
@@ -79,17 +86,28 @@ if($_POST){
                         <span class="font-weight-bold my-2"><?php echo $pregunta_b.':'; ?></span>
                       </div>
                       <div class="col-md-6">
-                        <input type="password" name="respuesta_z" class="form-control">
+                      <v-text-field
+                        name="respuesta_z"
+                        v-model="camposPorValidar[1]"
+                        :rules="[reglas.requerido]"
+                        type="password"
+                        dense
+                        outlined
+                      />
                       </div>
                     </div>
                     <!--FIN FILA INPUT-->
                     <div class="row justify-content-end mx-1 my-5">
-                      <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit">
+                      <button
+                        class="btn btn-sm btn-primary mx-1 font-weight-bold text-white"
+                        type="submit"
+                        :disabled="validar_campos(2,camposPorValidar)"
+                      >
                         <span class="btn-sm text-white mdi mdi-check-circle"></span>
                         SIGUIENTE
                       </button>
                       <a href="iniciarsesion.php">
-                        <button class="btn btn-sm btn-danger font-weight-bold" type="button">
+                        <button class="btn btn-sm btn-danger text-white font-weight-bold" type="button">
                           <span class="btn-sm text-white mdi mdi-cancel"></span>
                           CANCELAR
                         </button>

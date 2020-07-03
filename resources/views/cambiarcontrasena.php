@@ -78,21 +78,36 @@ if($_POST){
           <div class="row justify-content-center">
             <div class="col-md-3">
               <div class="row mb-2">
-                <input type="password" class="form-control" name="contrasena_actual" placeholder="Contraseña antigua" required>
+                <v-text-field type="password" name="contrasena_actual" v-model="camposPorValidar[0]" placeholder="Contraseña actual"
+                  :rules="[reglas.requerido]" dense outlined counter="8" maxlength="8" />
               </div>
               <div class="row mb-2">
-                <input type="password" class="form-control" name="contrasena_nueva" placeholder="Nueva contraseña">
+                <v-text-field type="password" v-model="camposPorValidar[1]" name="contrasena_nueva"
+                  placeholder="Nueva contraseña" :rules="[reglas.requerido]" dense outlined counter="8" maxlength="8" />
               </div>
               <div class="row">
-                <input type="password" class="form-control" name="contrasena_nueva_confirmada"
-                  placeholder="Confirmar contraseña" required>
+                <v-text-field type="password" v-model="camposPorValidar[2]" name="contrasena_nueva_confirmada"
+                  placeholder="Confirmar contraseña" :rules="[reglas.requerido]" dense outlined counter="8"
+                  maxlength="8" />
               </div>
             </div>
           </div>
           <div class="row justify-content-center my-4">
-            <div class="col-6">
-              <button class="btn btn-sm btn-primary font-weight-bold" type="submit"> <span
-                  class="btn-sm text-white mdi mdi-check-circle"></span>ACEPTAR</button>
+            <div class="col-6" v-if="comparar_contrasenas(camposPorValidar[1],camposPorValidar[2])">
+              <button
+                class="btn btn-sm btn-primary text-white"
+                :disabled="validar_campos(3, camposPorValidar)"
+                type="submit">
+                <span class="btn-sm text-white mdi mdi-check-circle"></span>
+                ACEPTAR
+              </button>
+            </div>
+            <div class="row" v-else>
+              <a class="text-danger mx-auto" href="#contrasenas" style="text-decoration:none;">
+                <v-icon color="#e76">mdi-alert-circle-outline</v-icon>
+                Las contraseñas deben coincidir entre sí y tener 8 caracteres
+                <hr>
+              </a>
             </div>
           </div>
       </div>

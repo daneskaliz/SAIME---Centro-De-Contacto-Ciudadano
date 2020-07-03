@@ -59,6 +59,53 @@
     <hr>
     <div class="row">
 
+
+
+
+
+      <v-expansion-panels>
+
+        <?php foreach ($estados as $nombre): ?>
+        <div class="row">
+
+          <v-expansion-panel>
+            <v-expansion-panel-header>
+              <?php echo $nombre ?>
+            </v-expansion-panel-header>
+            <v-expansion-panel-content>
+              <?php foreach ($resultado as $oficina): ?>
+              
+              <div class="col-sm-4">
+                <div class="card my-1" style="height:280px;">
+                  <div class="card-body text-center">
+                    <img src="../../assets/img/saime.png" width="60" height="50" alt="">
+                    <h5 class="card-title px-3 mt-3"> <?php echo $oficina['nombre'] ?> </h5>
+                    <p class="card-text align-text-top px-3 text-justify"> <?php echo $oficina['direccion'] ?> </p>
+                    <p class="card-text align-text-top px-3 text-justify"> <?php echo $oficina['horario'] ?> </p>
+                  </div>
+                </div>
+              </div>  
+
+            <?php endforeach ?>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        
+        </div>
+        <?php endforeach ?>
+      
+      </v-expansion-panels>
+
+
+
+
+
+
+
+
+      <!--  -->
+
+
+
       <?php
             foreach($resultado as $dato):
             if($dato['estado'] == $estado){

@@ -20,18 +20,18 @@
             ciudadano cedulado y poseer una dirección de correo electrónico. Si aún no cuenta con dirección de correo
             acceda a un servidor de internet que brinde este servicio y regístrese en esta página.</p>
           <div class="row justify-content-center my-5">
-            <input type="checkbox" aria-label="Checkbox for following text input" class="my-1 mx-1">HE LEÍDO Y ACEPTO
-            LOS<a href="" class="ml-1 mr-1">TÉRMINOS Y CONDICIONES</a> PARA REGISTRARME EN EL PORTAL.
+            <input type="checkbox" v-model="variable_auxiliar" class="my-1 mx-1">HE LEÍDO Y ACEPTO
+            LOS<a href="#" class="ml-1 mr-1">TÉRMINOS Y CONDICIONES</a> PARA REGISTRARME EN EL PORTAL.
           </div>
           <div class="row justify-content-end mx-1 mb-4">
             <a href="registrousuario.php">
-              <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit">
+              <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" :disabled="!variable_auxiliar" type="submit">
                 <span class="btn-sm text-white mdi mdi-check-circle"></span>
                 SIGUIENTE
               </button>
             </a>
             <a href="iniciarsesion.php">
-              <button class="btn btn-sm btn-danger font-weight-bold" type="submit"> <span
+              <button class="text-white btn btn-sm btn-danger font-weight-bold" type="submit"> <span
                   class="btn-sm text-white mdi mdi-cancel"></span>CANCELAR</button>
             </a>
           </div>

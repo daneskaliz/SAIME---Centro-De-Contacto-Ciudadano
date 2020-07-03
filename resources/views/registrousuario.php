@@ -69,128 +69,126 @@ if($_POST){
               </div>
 
               <div class="card-body">
-
                 <form method="POST">
                   <div class="row text-left">
                     <div class="card-body text-center">
                       <!--FILA SMALL-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primer Nombre:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primer nombre:</small>
                         </div>
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segundo Nombre:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segundo nombre: </small>
                         </div>
                       </div>
-                      <!--FIN FILA SMALL-->
 
-                      <!--FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <input type="text" name="primer_nombre" class="form-control">
+                          <v-text-field name="primer_nombre" v-model="camposPorValidar[0]" placeholder="Primer nombre"
+                            :rules="[reglas.requerido]" dense outlined maxlength="20" hint="(*) Requerido"
+                            persistent-hint />
                         </div>
                         <div class="col-md-6">
-                          <input type="text" name="segundo_nombre" class="form-control">
+                          <v-text-field name="segundo_nombre" placeholder="Segundo nombre" dense outlined
+                            maxlength="20" />
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
-
-                      <!--FILA SMALL-->
-                      <div class="row text-left my-2">
+                      <div class="row text-left">
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primer Apellido:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primera apellido:</small>
                         </div>
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segundo Apellido:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segundo apellido:</small>
                         </div>
                       </div>
-                      <!--FIN FILA SMALL-->
 
                       <!--FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <input type="text" name="primer_apellido" class="form-control">
+                          <v-text-field name="primer_apellido" v-model="camposPorValidar[1]" placeholder="Primer apellido" dense
+                            outlined maxlength="20" hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]" />
                         </div>
                         <div class="col-md-6">
-                          <input type="text" name="segundo_apellido" class="form-control">
+                          <v-text-field name="segundo_apellido" placeholder="Segundo apellido" dense outlined
+                            maxlength="20" />
                         </div>
                       </div>
                       <!--FIN FILA INPUT-->
-
-                      <!--FILA SMALL-->
-                      <div class="row text-left my-2">
+                      <div class="row text-left">
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Cédula:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Cédula de identidad:</small>
                         </div>
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Fecha de Nacimiento:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Fecha de nacimiento:</small>
                         </div>
                       </div>
-                      <!--FIN FILA SMALL-->
 
                       <!--FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <input type="text" name="numero_cedula" class="form-control">
+                          <v-text-field name="numero_cedula" v-model="camposPorValidar[2]" placeholder="Cédula de identidad"
+                            dense outlined maxlength="8" hint="(*) Requerido" persistent-hint
+                            :rules="[reglas.requerido]" />
                         </div>
                         <div class="col-md-6">
-                          <input type="date" name="fecha_nacimiento" class="form-control">
-                        </div>
-                      </div>
-                      <div class="row text-left my-2">
-                        <div class="col-md-6">
-                          <small for="inputEmail4" class="ml-1 font-weight-bold">Correo Electrónico:</small>
-                        </div>
-                        <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Teléfono:</small>
+                          <v-text-field name="fecha_nacimiento" type="date" v-model="camposPorValidar[3]" placeholder="Fecha de nacimiento" dense
+                            outlined hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]" />
                         </div>
                       </div>
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <input type="email" name="correo" class="form-control" id="inputEmail4">
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Correo electrónico:</small>
+                        </div>
+                        <div class="col-md-6">
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Número telefónico:</small>
+                        </div>
+                      </div>
+
+                      <div class="row text-left">
+                        <div class="col-md-6">
+                          <v-text-field type="email" name="correo" v-model="camposPorValidar[4]"
+                            placeholder="Correo electrónico" dense outlined maxlength="50" hint="(*) Requerido"
+                            persistent-hint :rules="[reglas.requerido]" />
                         </div>
                         <div class="col-md-2">
-                          <select name="codigo_telefono" class="form-control">
-                            <option selected>0412</option>
-                            <option>0414</option>
-                            <option>0424</option>
-                            <option>0416</option>
-                            <option>0426</option>
-                          </select>
+                          <v-text-field name="codigo_telefono" v-model="camposPorValidar[5]" placeholder="Código" dense
+                            outlined maxlength="4" hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]" />
                         </div>
                         <div class="col-md-4">
-                          <input type="text" name="numero_telefono" class="form-control">
+                          <v-text-field name="numero_telefono" v-model="camposPorValidar[6]" placeholder="Número de teléfono"
+                            dense outlined maxlength="7" hint="(*) Requerido" persistent-hint
+                            :rules="[reglas.requerido]" />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="alert alert-info" role="alert">
-                    <span class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
+                    <span id="contrasenas" class="font-weight-bold text-primary"><span class="mdi mdi-lock-question"></span>
                       SEGURIDAD</span>
                   </div>
                   <div class="row text-left">
                     <div class="col-12">
                       <div class="card-body text-center">
-
-                        <!--FILA SMALL-->
                         <div class="row text-left">
                           <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Contraseña</small>
+                            <small class="ml-1 font-weight-bold">Contraseña:</small>
                           </div>
                           <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Confirmar
-                              Contraseña:</small>
+                            <small class="ml-1 font-weight-bold">Confirmar
+                              contraseña:</small>
                           </div>
                         </div>
-                        <!--FIN FILA SMALL-->
 
                         <!--FILA INPUT-->
                         <div class="row text-left">
                           <div class="col-md-6">
-                            <input type="text" name="contrasena" class="form-control">
+                            <v-text-field name="contrasena" placeholder="Contraseña" v-model="camposPorValidar[7]" dense outlined maxlength="8"
+                              hint="(*) Requerido" type="password" persistent-hint :rules="[reglas.requerido]" />
                           </div>
                           <div class="col-md-6">
-                            <input type="text" name="confirmar_contrasena" class="form-control">
+                            <v-text-field name="confirmar_contrasena" type="password" v-model="camposPorValidar[8]" placeholder="Contraseña" dense
+                              outlined maxlength="8" hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]" />
                           </div>
                         </div>
                         <!--FIN FILA INPUT-->
@@ -219,22 +217,13 @@ if($_POST){
                         <!--FILA INPUT-->
                         <div class="row text-left">
                           <div class="col-md-6">
-                            <select name="pregunta_uno" class="form-control">
-                              <option selected>Seleccione</option>
-                              <option>Nombre de su canción favorita</option>
-                              <option>Nombre de su primera mascota</option>
-                              <option>Lugar de nacimiento de su abuela</option>
-                              <option>Color favorito</option>
-                              <option>Marca de su primer carro</option>
-                              <option>Equipo deportivo preferido</option>
-                              <option>Fecha de nacimiento de tu padre</option>
-                              <option>Lugar de nacimiento de su madre</option>
-                              <option>Fruta favorita</option>
-                              <option>Fecha de tu graduación</option>
-                            </select>
+                            <v-select name="pregunta_uno" :items="preguntas_a" v-model="camposPorValidar[9]" placeholder="Seleccionar" dense
+                              outlined hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]">
+                            </v-select>
                           </div>
                           <div class="col-md-6">
-                            <input type="text" name="respuesta_uno" class="form-control">
+                            <v-text-field name="respuesta_uno" v-model="camposPorValidar[10]" placeholder="Respuesta 1" dense outlined
+                              hint="(*) Requerido" persistent-hint />
                           </div>
                         </div>
                         <!--FIN FILA INPUT-->
@@ -253,77 +242,71 @@ if($_POST){
                         <!--FILA INPUT-->
                         <div class="row text-left">
                           <div class="col-md-6">
-                            <select name="pregunta_dos" class="form-control">
-                              <option selected>Seleccione</option>
-                              <option>Nombre de su canción favorita</option>
-                              <option>Nombre de su primera mascota</option>
-                              <option>Lugar de nacimiento de su abuela</option>
-                              <option>Color favorito</option>
-                              <option>Marca de su primer carro</option>
-                              <option>Equipo deportivo preferido</option>
-                              <option>Fecha de nacimiento de tu padre</option>
-                              <option>Lugar de nacimiento de su madre</option>
-                              <option>Fruta favorita</option>
-                              <option>Fecha de tu graduación</option>
-                            </select>
+                          <v-select name="pregunta_dos" :items="preguntas_b" v-model="camposPorValidar[11]" placeholder="Seleccionar" dense
+                              outlined hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]">
+                            </v-select>
                           </div>
                           <div class="col-md-6">
-                            <input type="text" name="respuesta_dos" class="form-control">
+                            <v-text-field name="respuesta_dos" placeholder="Respuesta 2" v-model="camposPorValidar[12]" dense outlined
+                              hint="(*) Requerido" persistent-hint />
                           </div>
                         </div>
-                        <!--FIN FILA INPUT-->
+                      </div>
+                      <!--FIN FILA INPUT-->
 
-                        <!--FILA SMALL-->
-                        <div class="row text-left my-2">
-                          <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Tercera Pregunta:</small>
-                          </div>
-                          <div class="col-md-6">
-                            <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 3</small>
-                          </div>
+                      <!--FILA SMALL-->
+                      <div class="row text-left my-2">
+                        <div class="col-md-6">
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Tercera Pregunta:</small>
                         </div>
-                        <!--FIN FILA SMALL-->
-
-                        <!--FILA INPUT-->
-                        <div class="row text-left">
-                          <div class="col-md-6">
-                            <select name="pregunta_tres" class="form-control">
-                              <option selected>Seleccione</option>
-                              <option>Nombre de su canción favorita</option>
-                              <option>Nombre de su primera mascota</option>
-                              <option>Lugar de nacimiento de su abuela</option>
-                              <option>Color favorito</option>
-                              <option>Marca de su primer carro</option>
-                              <option>Equipo deportivo preferido</option>
-                              <option>Fecha de nacimiento de tu padre</option>
-                              <option>Lugar de nacimiento de su madre</option>
-                              <option>Fruta favorita</option>
-                              <option>Fecha de tu graduación</option>
-                            </select>
-                          </div>
-                          <div class="col-md-6">
-                            <input type="text" name="respuesta_tres" class="form-control">
-                          </div>
+                        <div class="col-md-6">
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Respuesta 3</small>
                         </div>
-                        <!--FIN FILA INPUT-->
+                      </div>
+                      <!--FIN FILA SMALL-->
 
-                        <div class="row justify-content-end my-1 mx-4 py-5">
-                          <button class="btn btn-sm btn-primary mx-1 font-weight-bold text-white" type="submit">
-                            <span class="btn-sm text-white mdi mdi-check-circle"></span>
-                            REGISTRAR
-                          </button>
+                      <!--FILA INPUT-->
+                      <div class="row text-left">
+                        <div class="col-md-6">
+                          <v-select name="pregunta_tres" :items="preguntas_c" v-model="camposPorValidar[13]" placeholder="Seleccionar" dense
+                            outlined hint="(*) Requerido" persistent-hint :rules="[reglas.requerido]">
+                          </v-select>
+                        </div>
+                        <div class="col-md-6">
+                          <v-text-field name="respuesta_tres" placeholder="Respuesta 3" v-model="camposPorValidar[14]" dense outlined
+                            hint="(*) Requerido" persistent-hint />
                         </div>
                       </div>
                     </div>
+                    <!--FIN FILA INPUT-->
+
+                    <div class="row justify-content-end my-1 mx-4 py-5">
+                      <button
+                        class="btn btn-sm btn-primary mx-1 font-weight-bold text-white"
+                        v-if="comparar_contrasenas(camposPorValidar[7],camposPorValidar[8])"
+                        :disabled="validar_campos(15, camposPorValidar, false, null)"
+                        type="submit"
+                      >
+                        <span class="btn-sm text-white mdi mdi-check-circle"></span>
+                        REGISTRAR
+                      </button>
+                      <!-- <v-btn @click="pruebas" >TEST</v-btn> -->
+                      <div class="row" v-else>
+                        <a class="text-danger mx-auto" href="#contrasenas" style="text-decoration:none;">
+                        <v-icon color="#e76">mdi-alert-circle-outline</v-icon>
+                          Las contraseñas deben coincidir entre sí y tener 8 caracteres 
+                          <hr>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </form>
               </div>
             </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <?php include('../layout/footer.php'); ?>

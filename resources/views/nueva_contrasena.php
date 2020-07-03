@@ -45,30 +45,39 @@ if($_POST){
               cuenta de usuario con la nueva contraseña</h6><span>
         </div>
         <form class="form-signin text-center" method="POST">
-          <img class="mb-2" src="../../assets/img/saime.png" alt="" width="102"
-            height="72">
+          <img class="mb-2" src="../../assets/img/saime.png" alt="" width="102" height="72">
           <div class="row justify-content-center">
             <h5 class="h5 mb-3">Por favor ingrese una nueva contraseña</h5>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-3">
               <div class="row mb-2">
-                <input type="password" name="nueva_contrasena" id="inputEmail" class="form-control" placeholder="Contraseña" required autofocus>
+                <v-text-field name="nueva_contrasena" type="password" v-model="camposPorValidar[0]" placeholder="Contraseña"
+                  :rules="[reglas.requerido]" dense outlined counter="8" maxlength="8" autofocus/>
               </div>
               <div class="row">
-                <input type="password" name="contrasena_confirmada" id="inputEmail" class="form-control" placeholder="Confirmar contraseña" required>
+                <v-text-field name="contrasena_confirmada" type="password" v-model="camposPorValidar[1]"
+                  placeholder="Confirmar contraseña" :rules="[reglas.requerido]" :error-messages="variable_auxiliar" dense outlined counter="8"
+                  maxlength="8" />
               </div>
             </div>
           </div>
           <div class="row justify-content-center my-4">
             <div class="col-6">
-              <button class="btn btn-sm btn-primary font-weight-bold" type="submit"> <span
-                  class="btn-sm text-white mdi mdi-send"></span>REESTABLECER</button>
+              <button class="btn btn-sm btn-primary font-weight-bold text-white"
+                :disabled="validar_campos(2, camposPorValidar, true, 8)" type="submit">
+                <span class="btn-sm text-white mdi mdi-send"></span>
+                REESTABLECER
+              </button>
+              <v-snackbar v-model="snack.active">
+                <span class="mdi mdi-information-outline"></span>
+                {{ snack.msg }}
+              </v-snackbar>
             </div>
           </div>
+        </form>
       </div>
     </div>
-    </form>
   </div>
 </div>
 

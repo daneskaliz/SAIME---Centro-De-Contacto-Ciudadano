@@ -76,26 +76,14 @@
   </div>
 </footer>
 <!--FIN FOOTER-->
-</div>
+</v-app>
+<!-- FIN VUE -->
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../../public/js/main.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="../../public/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
-
-
-<script>
-var app = new Vue({
-  el: '#app',
-  vuetify: new Vuetify(),
-  data: {
-  },
-  methods: {
-    alertar(val) {
-      alert(val);
-    }
-  },
-})
-</script>

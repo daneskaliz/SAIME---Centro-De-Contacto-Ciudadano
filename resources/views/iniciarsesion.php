@@ -99,13 +99,46 @@ if(isset($_GET['cc'])){
                 <div class="row justify-content-center">
                   <div class="col-md-10">
                     <small for="inputPassword" class="sr-only">Cédula de Identidad</small>
-                    <input name="cedula" class="form-control" placeholder="Cédula de identidad" required>
+                    <v-text-field
+                      name="cedula"
+                      v-model="camposPorValidar[0]"
+                      placeholder="Cédula de identidad"
+                      :rules="[reglas.requerido]"
+                      dense
+                      outlined
+                      counter="8"
+                      maxlength="8"
+                    />
                   </div>
                 </div>
-                <div class="row justify-content-center my-2">
+                <div class="row justify-content-center">
                   <div class="col-md-10">
                     <small for="inputPassword" class="sr-only">Contraseña</small>
-                    <input name="contrasena" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                    <v-text-field
+                      name="contrasena"
+                      v-model="camposPorValidar[1]"
+                      placeholder="Contraseña"
+                      :rules="[reglas.requerido]"
+                      type="password"
+                      dense
+                      outlined
+                      counter="8"
+                      maxlength="8"  
+                    />
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-6">
+                    <!-- href="sesion1.php" --></span>
+                    <button
+                      class="btn btn-primary btn-sm text-white font-weight-bold"
+                      :disabled="validar_campos(2, camposPorValidar)"
+                      type="submit"
+                      role="button"
+                    >
+                      <span class="mdi mdi-login text-white"></span>
+                      INGRESAR
+                    </button>
                   </div>
                 </div>
                 <div class="row justify-content-center my-2">
@@ -113,15 +146,6 @@ if(isset($_GET['cc'])){
                 </div>
                 <div class="row justify-content-center my-2">
                   <a href="terminosycondiciones.php">¿No se encuentra registrado?</a>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-6">
-                    <!-- href="sesion1.php" --></span>
-                    <button class="btn btn-primary btn-sm font-weight-bold" type="submit" role="button">
-                      <span class="mdi mdi-login text-white"></span>
-                      INGRESAR
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

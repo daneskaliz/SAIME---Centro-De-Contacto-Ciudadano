@@ -22,10 +22,11 @@ $solicitudes_admin_res = consultar($pdo);
 
     $observaciones_u = $_POST['observaciones'];
     $id_u = $_POST['id'];
+    $estatus_modificado = $_POST['estatus_modificado'];
     // probar insertar array
     $update_solicitudes_admin = 'UPDATE solicitudes SET observaciones = ?, estatus_solicitud = ?, fecha_atencion = ? WHERE id = ? ';
     $update_solicitudes_admin_pdo = $pdo->prepare($update_solicitudes_admin);
-    $update_solicitudes_admin_pdo->execute(array($observaciones_u, 'Solicitud atendida', date('d-m-Y'), $id_u));    
+    $update_solicitudes_admin_pdo->execute(array($observaciones_u, $estatus_modificado, date('d-m-Y'), $id_u));    
     consultar($pdo);
     echo '
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -94,7 +95,7 @@ $solicitudes_admin_res = consultar($pdo);
                     <span class="mdi mdi-cancel"></span>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+                    <button type="button" class="btn btn-dark text-white btn-sm" data-toggle="modal"
                       data-target="#exampleModal<?php echo $solicitud['id']; ?>">
                       Ver
                     </button>
@@ -114,14 +115,16 @@ $solicitudes_admin_res = consultar($pdo);
                                 <div class="card">
                                   <div class="alert alert-danger font-weight-bold text-center" role="alert">
                                     <span class="mdi mdi-cancel"></span>
-                                      <?php echo $solicitud['estatus_solicitud']; ?>
+                                    <?php echo $solicitud['estatus_solicitud']; ?>
                                   </div>
                                   <div class="card-body">
                                     <form method="POST">
                                       <input type="hidden" name="id" value="<?php echo $solicitud['id']; ?>">
                                       <div class="row mb-2">
                                         <div class="col-md-6">
-                                          <span class="mdi mdi-card-account-details"></span>
+                                          <span class="mdi mdi-card-account-details"></span> <small
+                                            class="font-weight-bold"> C.I. :
+                                          </small>
                                         </div>
                                         <div class="col-md-6">
                                           <input class="form-control" readonly name="documento_solicitante"
@@ -184,11 +187,8 @@ $solicitudes_admin_res = consultar($pdo);
                                           </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <select class="form-control" name="estatus_modificado"
-                                            id="exampleFormControlSelect1">
-                                            <option>Solicitud Pendiente</option>
-                                            <option>Solicitud Atendida</option>
-                                          </select>
+                                          <v-select name="estatus_modificado" dense outlined placeholder="Estatus"
+                                            :items="['Solicitud Pendiente','Solicitud Atendida']" v-model="camposPorValidar[0]" />
                                         </div>
                                       </div>
                                       <div class="row mt-2">
@@ -196,7 +196,7 @@ $solicitudes_admin_res = consultar($pdo);
                                           <div class="form-group">
                                             <label for="message-text"
                                               class="col-form-label text-left">Descripción:</label>
-                                            <textarea class="form-control" name="descripcion_solicitante"
+                                            <textarea class="form-control" rows="4" name="descripcion_solicitante"
                                               readonly><?php echo $solicitud['descripcion_solicitante']; ?></textarea>
                                           </div>
                                         </div>
@@ -206,11 +206,16 @@ $solicitudes_admin_res = consultar($pdo);
                                           <div class="form-group">
                                             <label for="message-text"
                                               class="col-form-label text-left">Observaciones:</label>
-                                            <textarea class="form-control" name="observaciones"
-                                              id="message-text"></textarea>
-                                            <div class="modal-footer">
-                                              <button type="submit" class="btn btn-primary">Enviar</button>
-                                            </div>
+                                            <v-textarea dense outlined rows="5" name="observaciones"
+                                              v-model="camposPorValidar[1]" :rules="reglas.requerido" maxlength="500" counter
+                                              placeholder="Observaciones ante el planteamiento del usuario"></v-textarea>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary text-white"
+                                              :disabled="validar_campos(2,camposPorValidar, false, null)"
+                                            >
+                                              Enviar
+                                            </button>
                                           </div>
                                         </div>
                                       </div>

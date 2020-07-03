@@ -74,7 +74,7 @@ if(!$_SESSION){
                   <td>
                     <button
                       type="button"
-                      class="btn btn-dark btn-sm"
+                      class="btn btn-dark btn-sm text-white"
                       data-toggle="modal"
                       data-target="#exampleModal<?php echo $s_atendida['id'] ?>"
                     >

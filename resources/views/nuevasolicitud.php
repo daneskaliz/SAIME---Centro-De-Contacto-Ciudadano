@@ -92,7 +92,8 @@ if($_POST){
                       <span class="mdi mdi-account"></span> <small class="font-weight-bold"> Nombre: </small>
                     </div>
                     <div class="col-md-6">
-                      <input class="form-control" name="nombre_solicitante">
+                      <v-text-field name="nombre_solicitante" v-model="camposPorValidar[0]" :rules="[reglas.requerido]"
+                        maxlength="50" dense outlined></v-text-field>
                     </div>
                   </div>
                   <div class="row mb-2">
@@ -100,7 +101,8 @@ if($_POST){
                       <span class="mdi mdi-email"></span> <small class="font-weight-bold"> Correo Electrónico: </small>
                     </div>
                     <div class="col-md-6">
-                      <input class="form-control" name="correo_solicitante">
+                      <v-text-field name="correo_solicitante" v-model="camposPorValidar[1]" :rules="[email_regla]"
+                        maxlength="50" dense outlined></v-text-field>
                     </div>
                   </div>
                   <div class="row mb-2">
@@ -108,25 +110,18 @@ if($_POST){
                       <span class="mdi mdi-cellphone-iphone"></span> <small class="font-weight-bold"> Teléfono: </small>
                     </div>
                     <div class="col-md-6">
-                      <input class="form-control" name="telefono_solicitante">
+                      <v-text-field name="telefono_solicitante" maxlength="20" v-model="camposPorValidar[2]"
+                        :rules="[reglas.requerido]" dense outlined></v-text-field>
                     </div>
                   </div>
-                  <small for="exampleFormControlSelect1" class="font-weight-bold mx-1">Tipo de Solicitud</small>
-                  <select class="form-control" name="tipo_solicitud" id="exampleFormControlSelect1">
-                    <option>Seleccione</option>
-                    <option>PETICIONES</option>
-                    <option>RECLAMOS</option>
-                    <option>SUGERENCIAS</option>
-                    <option>DENUNCIAS</option>
-                  </select>
-                  <small for="formGroupExampleInput" class="font-weight-bold mx-1">Descripción:</small>
-                  <textarea
-                    class="form-control"
-                    rows="8"
-                    name="descripcion_solicitante"
-                    placeholder="Escriba sus comentarios"
-                  ></textarea>
-                  <button class="btn btn-primary mt-4 mb-2" type="submit">
+                  <small class="font-weight-bold mx-1">Tipo de Solicitud</small>
+                  <v-select dense outlined v-model="camposPorValidar[3]" name="tipo_solicitud"
+                    :items="['PETICIONES','RECLAMOS', 'SUGERENCIAS','DENUNCIAS']">
+                  </v-select>
+                  <small class="font-weight-bold mx-1">Descripción:</small>
+                  <v-textarea dense outlined rows="8" name="descripcion_solicitante"
+                  v-model="camposPorValidar[4]" maxlength="500" counter placeholder="Escriba sus comentarios"></v-textarea>
+                  <button class="btn btn-primary mt-4 mb-2" :disabled="validar_campos(4,camposPorValidar)" type="submit">
                     Enviar
                   </button>
                 </form>
