@@ -28,9 +28,18 @@ if($_POST){
 
   if($select_cedula_resultado){
     
-    $_POST['codigo'] = 1;
-    
+    if($select_cedula_resultado['estatus'] != 'Habilitado'){
+      echo '
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong> <span class="mdi mdi-alert-circle" style="color:#834;"></span>Usuario deshabilitado</strong> Por favor comuníquese con el administrador de usuarios.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+      ';
+    } else{  
     header('Location:preguntas_seguridad.php?b='.$cedula_consultada.'&x='.$x.'&y='.$y);
+  }
   }
   else {
      echo '

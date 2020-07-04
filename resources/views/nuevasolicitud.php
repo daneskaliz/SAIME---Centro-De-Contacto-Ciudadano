@@ -23,7 +23,7 @@ if($_POST){
   $telefono_solicitante = $_POST['telefono_solicitante'];
   $tipo_solicitud = $_POST['tipo_solicitud'];
   $descripcion_solicitante = $_POST['descripcion_solicitante'];
-  $observaciones = 'Su solicitud esta siendo atendida por nuestros colaboradores';
+  $observaciones = 'Estimado usuario, gracias por escribirnos. Su solicitud sera atendida a la brevedad posible, pronto estaremos contactandolo por esta via para dar respuesta a su requerimiento.';
   
   
   $insert_solicitud_query = 'INSERT INTO solicitudes (nombre_solicitante, documento_solicitante, correo_solicitante, telefono_solicitante, tipo_solicitud, descripcion_solicitante, observaciones, estatus_solicitud, fecha_solicitud, fecha_atencion) VALUES (?,?,?,?,?,?,?,?,?,?)';

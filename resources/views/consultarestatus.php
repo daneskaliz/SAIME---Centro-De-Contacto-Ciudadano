@@ -174,7 +174,7 @@ if(!$select_solicitudes_res){
                                           <div class="form-group">
                                             <label for="message-text"
                                               class="col-form-label text-left">Descripción:</label>
-                                            <textarea class="form-control" disabled
+                                            <textarea class="form-control" rows="6" disabled
                                               id="message-text"><?php echo $key['descripcion_solicitante']; ?></textarea>
                                           </div>
                                         </div>
@@ -185,7 +185,7 @@ if(!$select_solicitudes_res){
                                             <label for="message-text" class="col-form-label text-left">
                                               Observaciones:
                                             </label>
-                                            <textarea class="form-control" disabled><?php echo $key['observaciones']; ?></textarea>
+                                            <textarea class="form-control" rows="6" disabled><?php echo $key['observaciones']; ?></textarea>
                                           </div>
                                         </div>
                                       </div>

@@ -5,8 +5,6 @@ if(!$_SESSION){
   header('Location: index.php');
 }
 
-// TODO Crear un raidioButton para definir si se toma o no el cambio en la preguntas de seguridad
-
 $select_usuario_modificar = 'SELECT * FROM personas WHERE cedula = ?';
 $select_usuario_md_pdo = $pdo->prepare($select_usuario_modificar);
 $select_usuario_md_pdo->execute(array($_SESSION['cedula']));
@@ -156,7 +154,7 @@ if($_POST){
                             :rules="[email_regla]" dense outlined counter maxlength="50" />
                         </div>
                         <div class="col-md-6">
-                          <v-text-field id="telef" value="<?php echo $select_usuario_md_resultado['telefono']; ?>"
+                          <v-text-field name="telef" type="number" value="<?php echo $select_usuario_md_resultado['telefono']; ?>"
                             v-model="camposPorValidar[1]" :rules="[reglas.requerido]" dense outlined counter
                             maxlength="20" />
 

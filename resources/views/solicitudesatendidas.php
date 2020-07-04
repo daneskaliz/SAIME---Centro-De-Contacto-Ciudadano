@@ -5,7 +5,7 @@ include('../layout/header.php');
 if(!$_SESSION){
   header('Location: index.php');
 } else{
-  if($_SESSION['rol'] != 'Administrador'){
+  if($_SESSION['rol'] == 'Usuario'){
     header('Location: index.php');  
   }
 }
@@ -42,7 +42,7 @@ if(!$_SESSION){
 
 
 <div class="container-fluid containersesion10">
-  <h5 class="text-white text-center py-5 font-weight-bold fontindex">BANDEJA DE SOLICITUDES</h5>
+  <h5 class="text-white text-center py-5 font-weight-bold fontindex">SOLICITUDES ATENDIDAS</h5>
 </div>
 
 <div class="container-fluid containersesion11 my-5 py-5">
@@ -68,7 +68,7 @@ if(!$_SESSION){
                 <tr>
                   
                   <th scope="row"><?php echo $s_atendida['id'] ?></th>
-                  <td><?php echo $s_atendida['fecha_solicitud'] ?></td>
+                  <td><?php echo $s_atendida['fecha_atencion'] ?></td>
                   <td><?php echo $s_atendida['nombre_solicitante'] ?></td>
                   <td><?php echo $s_atendida['tipo_solicitud'] ?></td>
                   <td><span class="ml-3 mdi mdi-check-circle"></span></td>

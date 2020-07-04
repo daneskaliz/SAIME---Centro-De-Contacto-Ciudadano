@@ -33,8 +33,6 @@
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="cambiarcontrasena.php">CAMBIAR CONTRASEÑA</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="registrousuario.php">NUEVO USUARIO</a>
-        <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="../../db/cerrar.php">SALIR</a>
     </li>
   </ul>

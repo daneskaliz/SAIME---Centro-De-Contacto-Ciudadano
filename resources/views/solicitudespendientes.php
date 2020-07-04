@@ -3,7 +3,7 @@ include('../layout/header.php');
 if(!$_SESSION){
   header('Location: index.php');
 } else {
-  if($_SESSION['rol'] != 'Administrador'){
+  if($_SESSION['rol'] == 'Usuario'){
     header('Location: index.php');
   }
 }
@@ -63,7 +63,7 @@ $solicitudes_admin_res = consultar($pdo);
   ?>
 
 <div class="container-fluid containersesion10">
-  <h5 class="text-white text-center py-5 font-weight-bold fontindex">BANDEJA DE SOLICITUDES</h5>
+  <h5 class="text-white text-center py-5 font-weight-bold fontindex">SOLICITUDES PENDIENTES</h5>
 </div>
 
 <div class="container-fluid containersesion11 my-5 py-5">
@@ -127,8 +127,7 @@ $solicitudes_admin_res = consultar($pdo);
                                           </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <input class="form-control" readonly name="documento_solicitante"
-                                            value="<?php echo $solicitud['documento_solicitante']; ?>">
+                                        <span><?php echo $solicitud['documento_solicitante']; ?></span>
                                         </div>
                                       </div>
                                       <div class="row mb-2">
@@ -137,8 +136,7 @@ $solicitudes_admin_res = consultar($pdo);
                                           </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <input class="form-control" readonly name="nombre_solicitante"
-                                            value="<?php echo $solicitud['nombre_solicitante']; ?>">
+                                        <span><?php echo $solicitud['nombre_solicitante']; ?></span>
                                         </div>
                                       </div>
                                       <div class="row mb-2">
@@ -147,8 +145,7 @@ $solicitudes_admin_res = consultar($pdo);
                                             Electrónico: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <input class="form-control" readonly name="correo_solicitante"
-                                            value="<?php echo $solicitud['correo_solicitante']; ?>">
+                                        <span><?php echo $solicitud['correo_solicitante']; ?></span>
                                         </div>
                                       </div>
                                       <div class="row mb-2">
@@ -157,8 +154,7 @@ $solicitudes_admin_res = consultar($pdo);
                                             class="font-weight-bold"> Teléfono: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <input class="form-control" readonly name="telefono_solicitante"
-                                            value="<?php echo $solicitud['telefono_solicitante']; ?>">
+                                        <span><?php echo $solicitud['telefono_solicitante']; ?></span>
                                         </div>
                                       </div>
                                       <div class="row mb-2">
@@ -167,8 +163,7 @@ $solicitudes_admin_res = consultar($pdo);
                                             Tipo de Solicitud: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <input class="form-control" readonly name="tipo_solicitud"
-                                            value="<?php echo $solicitud['tipo_solicitud']; ?>">
+                                        <span><?php echo $solicitud['tipo_solicitud']; ?></span>
                                         </div>
                                       </div>
                                       <div class="row mb-2">
@@ -177,8 +172,7 @@ $solicitudes_admin_res = consultar($pdo);
                                             Fecha de Solicitud: </small>
                                         </div>
                                         <div class="col-md-6">
-                                          <input class="form-control" readonly name="fecha_solicitud"
-                                            value="<?php echo $solicitud['fecha_solicitud']; ?>">
+                                        <span><?php echo $solicitud['fecha_solicitud']; ?></span>
                                         </div>
                                       </div>
                                       <div class="row mb-2">

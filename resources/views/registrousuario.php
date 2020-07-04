@@ -26,14 +26,14 @@ if($_POST){
   $rol_nuevo_usuario = '';
 
   if(isset($_SESSION['rol'])){
-    ($_SESSION['rol'] == 'Administrador') ? $rol_nuevo_usuario = 'Administrador' : $rol_nuevo_usuario = 'Usuario';
+    ($_SESSION['rol'] == 'Master') ? $rol_nuevo_usuario = 'Administrador' : $rol_nuevo_usuario = 'Usuario';
   } else {
     $rol_nuevo_usuario = 'Usuario';
   }
 
-  $insert_datos_usuario_query = 'INSERT INTO personas (primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, cedula, fecha_nacimiento, correo, telefono, contrasena, pregunta_1, pregunta_2, pregunta_3, respuesta_1, respuesta_2, respuesta_3, rol) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+  $insert_datos_usuario_query = 'INSERT INTO personas (primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, cedula, fecha_nacimiento, correo, telefono, contrasena, pregunta_1, pregunta_2, pregunta_3, respuesta_1, respuesta_2, respuesta_3, rol,_) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,_)';
   $insert_datos_usuario_pdo = $pdo->prepare($insert_datos_usuario_query);
-  $insert_datos_usuario_pdo->execute(array($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido, $cedula, $fecha_nacimiento, $correo, $telefono, $contrasena, $pregunta_uno, $pregunta_dos, $pregunta_tres, $respuesta_uno, $respuesta_dos, $respuesta_tres, $rol_nuevo_usuario));
+  $insert_datos_usuario_pdo->execute(array($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido, $cedula, $fecha_nacimiento, $correo, $telefono, $contrasena, $pregunta_uno, $pregunta_dos, $pregunta_tres, $respuesta_uno, $respuesta_dos, $respuesta_tres, $rol_nuevo_usuario, 'Habilitado'));
   
   if(isset($_SESSION['rol'])){
     echo '
@@ -100,7 +100,7 @@ if($_POST){
                       <!--FIN FILA INPUT-->
                       <div class="row text-left">
                         <div class="col-md-6">
-                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primera apellido:</small>
+                          <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Primer apellido:</small>
                         </div>
                         <div class="col-md-6">
                           <small for="formGroupExampleInput" class="ml-1 font-weight-bold">Segundo apellido:</small>

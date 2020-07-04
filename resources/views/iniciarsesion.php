@@ -22,31 +22,42 @@ if($_POST){ // * Si se activa el método POST
   $select_usuario_resultado = $select_usuario_pdo->fetch(); // * Guardar el resultado de la consulta
 
   // * Validar usuario y contraseña desde BD
-    
-  if($select_usuario_resultado && password_verify($contrasena_login, $select_usuario_resultado['contrasena'])){
-  
-    $_SESSION = $select_usuario_resultado;
-    header('Location:index.php');    
 
-  } else {
-    
-    $_SESSION = array();
-    
-    if (ini_get("session.use_cookies")) {
-      $params = session_get_cookie_params();
-      setcookie(session_name(), '', time() - 42000,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
-      );
+  if($select_usuario_resultado['estatus'] != 'Habilitado'){
+    echo '
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong> <span class="mdi mdi-alert-circle" style="color:#834;"></span>Usuario deshabilitado</strong> Por favor comuníquese con el administrador de usuarios.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+    ';
+  }else{
+
+    if($select_usuario_resultado && password_verify($contrasena_login, $select_usuario_resultado['contrasena'])){
+  
+      $_SESSION = $select_usuario_resultado;
+      header('Location:index.php');    
+
+    } else {
+      
+      $_SESSION = array();
+      
+      if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+          $params["path"], $params["domain"],
+          $params["secure"], $params["httponly"]
+        );
+      }
+      
+      session_destroy();
+      $select_usuario_query = null;
+      $select_usuario_pdo = null;
+      $select_usuario_resultado = null;
+      
+      header('Location:iniciarsesion.php?error=true');  
     }
-    
-    session_destroy();
-    $select_usuario_query = null;
-    $select_usuario_pdo = null;
-    $select_usuario_resultado = null;
-    
-    header('Location:iniciarsesion.php?error=true');
-    
   }
 }
 

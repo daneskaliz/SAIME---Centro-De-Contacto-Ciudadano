@@ -1,9 +1,5 @@
-<?php
-  session_start();
+<?php session_start();
   date_default_timezone_set('America/Caracas');
-  //echo date('Y-m-d H:i') . "<br>\n";
-  
-
 ?>
 
 <?php include_once '../../db/conexion.php'; ?>
@@ -50,12 +46,15 @@
       <img src="../../assets/img/MPPRIJP.png" width="80" height="80" class="d-inline-block align-top ml-4" alt="logo">
     </a>
 
-    <?php 
+    <?php
   
   if($_SESSION){
     switch ($_SESSION['rol']) {
       case 'Administrador':
         include('opciones_admin.php');  
+      break;
+      case 'Master':
+        include('opciones_master.php');  
       break;
       case 'Usuario':
         include('opciones_usuario.php');  
@@ -68,23 +67,14 @@
     include('opciones_iniciales.php');
   }
   ?>
-
-
     <a class="navbar-brand d-flex flex-row justify-content-center" href="http://www.saime.gob.ve/">
       <img src="../../assets/img/saime.png" width="100" height="80" class="d-inline-block align-top mr-4" alt="logo">
     </a>
   </nav>
   <v-app id="app">
-
-    <?php if(isset($_SESSION['rol'])): ?>
-
-    <div class="row justify-content-end mr-5">
-      <span class="mdi mdi-account-outline"></span>
-      <p class="m-1"><small>Bienvenido:
-          <?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'] ?></small></p>
-    </div>
-
-
-    <?php endif ?>  
-
-      
+<?php if(isset($_SESSION['rol'])) : ?>
+<div class="row justify-content-end mr-5">
+<span class="mdi mdi-account-outline"></span>
+<p class="m-1"><small>Bienvenido:<?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'];?></small></p>
+</div>
+<?php endif ?>
