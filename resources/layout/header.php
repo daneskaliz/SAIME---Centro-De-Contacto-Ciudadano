@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!--CSS-->
-  <link rel="stylesheet" href="../../public/css/estilos56.css">
+  <link rel="stylesheet" href="../../public/css/estilos.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../../public/bootstrap-4.5.0-dist/css/bootstrap.min.css">
@@ -75,6 +75,8 @@
 <?php if(isset($_SESSION['rol'])) : ?>
 <div class="row justify-content-end mr-5">
 <span class="mdi mdi-account-outline"></span>
-<p class="m-1"><small>Bienvenido:<?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'];?></small></p>
+<p class="m-1"><small>Bienvenido: <?php echo $_SESSION['primer_nombre'].' '.$_SESSION['primer_apellido'];
+if ($_SESSION['rol'] == 'Administrador' || $_SESSION['rol'] == 'Master'){
+  echo ($_SESSION['rol'] == 'Administrador') ? ' <b>(Administrador)</b>' : ' <b>(Master)</b>' ; }?></small></p>
 </div>
 <?php endif ?>

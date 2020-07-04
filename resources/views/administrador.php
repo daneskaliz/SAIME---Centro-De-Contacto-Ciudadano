@@ -28,7 +28,6 @@ $personas_admin_res = consultar($pdo);
     $update_estatus_pdo = $pdo->prepare($update_estatus_query);
     $update_estatus_pdo->execute(array($estatus_usuario, $cedula_admin));
     
-    header('Location:administrador.php');    
     echo '
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong> <span class="mdi mdi-check" style="color:#384;"></span> Operación realizada</strong>
@@ -43,17 +42,17 @@ $personas_admin_res = consultar($pdo);
   if(!$personas_admin_res){
     echo'
       <div class="container-fluid containersesion4">
-        <h5 class="text-white text-center py-5 font-weight-bold fontindex">HISTORIAL DE SOLICITUDES</h5>
+        <h5 class="text-white text-center py-5 font-weight-bold fontindex"></h5>
       </div>
       <div class="container-fluid containersesion5 py-5">
         <div class="container contenidosesion2 bg-light pb-5">
           <div class="row ml-2">
-            <h5 class="shadow-none font-weight-bold bg-light mt-4 rounded">Haz seguimiento a tus solicitudes.</h5>
+            <h5 class="shadow-none font-weight-bold bg-light mt-4 rounded">Administrar usuarios.</h5>
           </div>
           <hr class="my-3">
           <div class="row text-center">
             <div class="col-12">
-              <p class="text-danger my-4"><span class="mdi mdi-alert"></span> En este momento no registra solicitudes.</p>
+              <p class="text-danger my-4"><span class="mdi mdi-alert"></span> No existen Administradores registrados.</p>
             </div>
           </div>
           </div>

@@ -16,26 +16,26 @@
       /*CONTACTO*/
       .container3{
         background-image: url("../../assets/img/theme.jpg");
-        height: 400px;
+        height: 500px;
       }
       .container4{
         background: white;
-        height: 440px;
+        height: 570px;
       }
       .contenido1{
-        margin-top: -320px;
+        margin-top: -400px;
       }
       /*OFICINAS*/
       .container5{
       background-image: url("../../assets/img/theme.jpg");
-      height: 600px;
+      height: 700px;
       }
       .container6{
         background: white;
-        height: 520px;
+        height: 600px;
       }
       .contenido2{
-        margin-top: -570px;
+        margin-top: -620px;
       }
       .myscroll{
         padding: 1rem 1.5rem;
@@ -53,26 +53,26 @@
       /*ESTILOS iniciosesion.php*/
         .container7{
           background-image: url("../../assets/img/theme.jpg");
-          height: 350px;
+          height: 450px;
         }
         .container8{
           background: white;
-          height: 370px;
+          height: 450px;
         }
         .card2{
-          margin-top: -270px;
+          margin-top: -370px;
           }
       /*ESTILOS terminosycondiciones.php*/
       .container9{
         background-image: url("../../assets/img/theme.jpg");
-        height: 350px;
+        height: 340px;
       }
       .container10{
         background: white;
-        height: 370px;
+        height: 420px;
       }
       .card3{
-        margin-top: -260px;
+        margin-top: -230px;
         }
         /*ESTILOS registrousuario.php*/
          /*nuevousuario.php*/
@@ -82,22 +82,22 @@
         }
         .container12{
           background: white;
-          height: 1150px;
+          height: 1170px;
         }
         .card4{
-          margin-top: -920px;
+          margin-top: -900px;
           } 
         /*ESTILOS reestablecercontrasena.php*/
         .container13{
           background-image: url("../../assets/img/theme.jpg");
-          height: 320px;
+          height: 350px;
         }
         .container14{
           background: white;
-          height: 320px;
+          height: 450px;
         }
         .card5{
-          margin-top: -230px;
+          margin-top: -250px;
           }  
           /*ESTILOS reestablecercontrasena2.php*/
         .container15{
@@ -106,22 +106,22 @@
         }
         .container16{
           background: white;
-          height: 320px;
+          height: 490px;
         }
         .card6{
-          margin-top: -360px;
+          margin-top: -300px;
           }
       /*ESTILOS reestablecercontrasena3.php*/
         .container17{
           background-image: url("../../assets/img/theme.jpg");
-          height: 320px;
+          height: 370px;
         }
         .container18{
           background: white;
-          height: 300px;
+          height: 490px;
         }
         .card7{
-          margin-top: -230px;
+          margin-top: -270px;
           }        
       /*ESTILOS FOOTER*/    
       .fondoFooter{
@@ -160,11 +160,11 @@
       /*solicitud.php*/
       .containersesion2{
         background-image: url("../../assets/img/theme.jpg");
-        height: 650px;
+        height: 690px;
       }
       .containersesion3{
         background: white;
-        height: 620px;
+        height: 670px;
       }
       .contenidosesion1{
         margin-top: -550px;
@@ -184,11 +184,11 @@
       /*consultarestatus.php SI*/
       .containersesion6{
         background-image: url("../../assets/img/theme.jpg");
-        height: 370px;
+        height: 450px;
         }
         .containersesion7{
           background: white;
-          height: 290px;
+          height: 370px;
         }
         .contenidosesion3{
           margin-top: -320px;
@@ -210,14 +210,14 @@
           /*modificarusuario2.php*/
          .containersesion8{
           background-image: url("../../assets/img/theme.jpg");
-          height: 650px;
+          height: 900px;
         }
         .containersesion9{
           background: white;
-          height: 670px;
+          height: 950px;
         }
         .cardsesion1{
-          margin-top: -560px;
+          margin-top: -760px;
           } 
         /*solicitudespendientes.php*/
         .containersesion10{
@@ -226,10 +226,10 @@
         }
         .containersesion11{
           background: white;
-          height: 320px;
+          height: 450px;
         }
         .contenidosesion4{
-          margin-top: -350px;
+          margin-top: -300px;
         }
         .myscroll3{
           padding: 1rem 1.5rem;
@@ -247,12 +247,12 @@
         /*ESTILOS cambiarcontrasena.php*/
         .containersesion12{
           background-image: url("../../assets/img/theme.jpg");
-          height: 370px;
+          height: 450px;
         }
         .containersesion13{
           background: white;
-          height: 330px;
+          height: 540px;
         }
         .cardsesion2{
-          margin-top: -280px;
+          margin-top: -330px;
           }       

@@ -14,15 +14,12 @@ if($_POST){
   $telefono = $_POST['codigo_telefono'].$_POST['numero_telefono'];
   $confirmar_contrasena = $_POST['confirmar_contrasena'];
   $contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
-
   $respuesta_uno = $_POST['respuesta_uno'];
   $respuesta_dos = $_POST['respuesta_dos'];
   $respuesta_tres = $_POST['respuesta_tres'];
-
   $pregunta_uno = $_POST['pregunta_uno'];
   $pregunta_dos = $_POST['pregunta_dos'];
   $pregunta_tres = $_POST['pregunta_tres'];
-  
   $rol_nuevo_usuario = '';
 
   if(isset($_SESSION['rol'])){
@@ -31,24 +28,20 @@ if($_POST){
     $rol_nuevo_usuario = 'Usuario';
   }
 
-  $insert_datos_usuario_query = 'INSERT INTO personas (primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, cedula, fecha_nacimiento, correo, telefono, contrasena, pregunta_1, pregunta_2, pregunta_3, respuesta_1, respuesta_2, respuesta_3, rol,_) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,_)';
+  $insert_datos_usuario_query = 'INSERT INTO personas (primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, cedula, fecha_nacimiento, correo, telefono, contrasena, pregunta_1, pregunta_2, pregunta_3, respuesta_1, respuesta_2, respuesta_3, rol,estatus) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
   $insert_datos_usuario_pdo = $pdo->prepare($insert_datos_usuario_query);
   $insert_datos_usuario_pdo->execute(array($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido, $cedula, $fecha_nacimiento, $correo, $telefono, $contrasena, $pregunta_uno, $pregunta_dos, $pregunta_tres, $respuesta_uno, $respuesta_dos, $respuesta_tres, $rol_nuevo_usuario, 'Habilitado'));
   
-  if(isset($_SESSION['rol'])){
-    echo '
+  echo '
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong> <span class="mdi mdi-check" style="color:#384;"></span>Usuario Administrador agregado</strong> - Puede iniciar sesión con los datos definidos.
+      <strong> <span class="mdi mdi-check" style="color:#384;"></span>Usuario registrado</strong> - Puede iniciar sesión con su documento de identidad y contraseña.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
       </button>
     </div>
   ';
-  }else{
-  header('Location: iniciarsesion.php');
-}
+  }  
   
-}
 
 ?>
 

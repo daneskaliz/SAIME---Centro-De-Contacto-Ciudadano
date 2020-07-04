@@ -100,7 +100,7 @@ if(!$select_solicitudes_res){
                                 <div class="card">
 
                                   <?php
-                                  if($key['estatus_solicitud']=='Solicitud atendida'){
+                                  if($key['estatus_solicitud']=='Solicitud Atendida'){
                                     echo '
                                     <div class="alert alert-success font-weight-bold text-center" role="alert">
                                       <span class="mdi mdi-check-circle"></span>
